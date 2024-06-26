@@ -49,6 +49,7 @@
 @media (max-width: 772px) {
   .Login .container .BallBox {
     border-radius: 0;
+    backdrop-filter: blur(0px);
   }
 }
 .Login .container .BallBox::before {
@@ -71,6 +72,7 @@
 @media (max-width: 772px) {
   .Login .container .BallBox::before {
     border-radius: 0;
+    background-color: transparent;
   }
   .Login .container .BallBox {
     border-radius: 0;

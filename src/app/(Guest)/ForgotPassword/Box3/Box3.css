@@ -1,0 +1,197 @@
+.ForgotPassword .ResetBox3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+ # Reset box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.ForgotPassword .container .ResetBox3 .ResetBox {
+  position: relative;
+  height: 80%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  transition: var(--main-transition);
+}
+@media (max-width: 772px) {
+  .ForgotPassword .container .ResetBox3 .ResetBox {
+    justify-content: center;
+    height: fit-content;
+  }
+}
+.ForgotPassword .container .ResetBox3 .ResetBox h1 {
+  position: relative;
+  color: #e6ecf1;
+  font-weight: 600;
+  font-size: 33px;
+  margin: 0;
+  letter-spacing: 1;
+  width: 100%;
+  text-align: center;
+}
+.ForgotPassword .container .ResetBox3 .ResetBox p {
+  position: relative;
+  width: 80%;
+  font-size: 14px;
+  font-weight: 300;
+  color: #e6ecf1;
+  text-align: center;
+}
+@media (max-width: 772px) {
+  .ForgotPassword .container .ResetBox3 .ResetBox p {
+    text-align: center;
+    width: 100%;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+    # Inputs
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.ForgotPassword .container .ResetBox3 .ResetBox .input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e7e8e9;
+  padding: 10px;
+  color: #e6ecf1;
+  width: 80%;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 100;
+}
+@media (max-width: 772px) {
+  .ForgotPassword .container .ResetBox3 .ResetBox .input-box {
+    width: 100%;
+  }
+}
+.ForgotPassword .container .ResetBox3 .ResetBox .input-box input {
+  width: 100%;
+  background-color: transparent;
+  color: #e6ecf1;
+  border: 0;
+  font-size: 14px;
+  letter-spacing: 1.2;
+  font-weight: 300;
+}
+.ForgotPassword .container .ResetBox3 .ResetBox .input-box input:focus {
+  border: 0;
+  outline: 0;
+  color: #e6ecf1;
+}
+.ForgotPassword .container .ResetBox3 .ResetBox .input-box input::placeholder {
+  color: #e6ecf1;
+  font-weight: 10;
+}
+.ForgotPassword .container .ResetBox3 .ResetBox .input-box i {
+  cursor: pointer;
+  color: #e6ecf1;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+ # Actions
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.ForgotPassword .container .ResetBox3 .ResetBox .Action-button {
+  position: relative;
+  width: 80%;
+  margin-top: 10px;
+}
+@media (max-width: 772px) {
+  .ForgotPassword .container .ResetBox3 .ResetBox .Action-button {
+    width: 100%;
+  }
+}
+.ForgotPassword .container .ResetBox3 .ResetBox .Action-button button {
+  position: relative;
+  width: 100%;
+  padding: 12px;
+  background-color: #81e200;
+  border-radius: 10px;
+  border: 0;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.ForgotPassword .container .ResetBox3 .ResetBox .remember-me {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 80%;
+  margin-top: 10px;
+}
+@media (max-width: 772px) {
+  .ForgotPassword .container .ResetBox3 .ResetBox .remember-me {
+    width: 100%;
+  }
+}
+
+.ForgotPassword .container .ResetBox3 .ResetBox .remember-me label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  color: #96b1c7;
+  font-weight: 100;
+  font-size: 14px;
+  cursor: pointer;
+}
+.ForgotPassword .container .ResetBox3 .ResetBox .remember-me label::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  left: 0;
+  border: 1px solid #e7e8e9;
+  border-radius: 2px;
+  transition: var(--main-transition);
+}
+.ForgotPassword .container .ResetBox3 .ResetBox .remember-me label:after {
+  position: absolute;
+  content: "\f00c";
+  font-family: "font Awesome 5 free";
+  font-weight: 900;
+  width: 17px;
+  height: 17px;
+  left: 0;
+  background-color: #81e200;
+  color: #e7e8e9;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  transition: var(--main-transition);
+  scale: 0;
+}
+.ForgotPassword
+  .container
+  .ResetBox3
+  .ResetBox
+  .remember-me
+  input:checked
+  + label:after {
+  scale: 1;
+  animation: rotate 0.5s ease-in-out alternate-reverse;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.ForgotPassword .container .ResetBox3 .ResetBox .remember-me a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #96b1c7;
+  font-weight: 100;
+  font-size: 14px;
+}
