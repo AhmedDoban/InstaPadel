@@ -1,0 +1,16 @@
+.MainTitle {
+  position: relative;
+  transition: var(--main-transition);
+}
+.MainTitle::before {
+  position: absolute;
+  content: "";
+  left: -9px;
+  top: -9px;
+  background-image: url("../../../public/TitleArrow.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: auto;
+  width: 100%;
+  height: 100%;
+}

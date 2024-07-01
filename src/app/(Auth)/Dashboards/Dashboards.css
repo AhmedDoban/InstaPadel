@@ -1,0 +1,325 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Dashboards
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Dashboards {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 30px;
+  padding: 0 10px 0 0;
+}
+@media (max-width: 992px) {
+  .Dashboards {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Dashboards left
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Dashboards > .left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Dashboards left Boxusers
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Dashboards .left .box-users {
+  position: relative;
+  background-color: #f7f9fb;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Dashboards left boxUsers head
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Dashboards .left .box-users .head-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 0 0 20px 0;
+}
+
+.Dashboards .left .box-users .head-box .left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 992px) {
+  .Dashboards .left .box-users .head-box .left {
+    gap: 5px;
+  }
+}
+.Dashboards .left .box-users .head-box .left .serch-box {
+  position: relative;
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.Dashboards .left .box-users .head-box .left .serch-box input {
+  position: relative;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  color: #1c1c1cc1;
+  transition: var(--main-transition);
+}
+
+.Dashboards .left .box-users .head-box .left .serch-box input::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #1c1c1c33;
+}
+.Dashboards .left .box-users .head-box .left .serch-box i {
+  color: #1c1c1c33;
+}
+.Dashboards .left .box-users .head-box .right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.Dashboards .left .box-users .head-box .right h1 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  color: #004077;
+}
+@media (max-width: 992px) {
+  .Dashboards .left .box-users .head-box .right h1 {
+    font-size: 14px;
+  }
+}
+.Dashboards .left .box-users .head-box .right span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b90b0;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Dashboards .left
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Dashboards .left .box-users .PlayersTable {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  border-spacing: 0;
+}
+@media (max-width: 992px) {
+  .Dashboards .left .box-users .PlayersTable {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+  }
+}
+.Dashboards .left .box-users .PlayersTable .TableHead th {
+  position: relative;
+  padding: 10px 0;
+  border-bottom: 1px solid #e6ecf1;
+  border-top: 1px solid #e6ecf1;
+  color: #2b608e;
+  font-size: 16px;
+  font-weight: 600;
+}
+.Dashboards .left .box-users .PlayersTable .TableHead th:nth-child(4) {
+  position: relative;
+  width: fit-content;
+  width: 50px;
+}
+@media (max-width: 992px) {
+  .Dashboards .left .box-users .PlayersTable .TableHead {
+    display: none;
+  }
+}
+
+.Dashboards .left .box-users .PlayersTable tr td {
+  position: relative;
+  padding: 5px 0;
+}
+.Dashboards .left .box-users .PlayersTable tr:nth-child(2) td {
+  padding: 15px 0 5px 0 !important;
+}
+.Dashboards .left .box-users .PlayersTable .user_Id_Data {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #2f3942;
+}
+.Dashboards .left .box-users .PlayersTable .user_Id_Data img {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.Dashboards .left .box-users .PlayersTable tr td.FullName span {
+  position: relative;
+  background-color: #f2fce6;
+  width: fit-content;
+  height: fit-content;
+  padding: 7px;
+  color: #81e200;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 94px;
+}
+.Dashboards .left .box-users .PlayersTable tr td.UserName {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  color: #002749;
+}
+
+.Dashboards .left .box-users .PlayersTable tr td.Level span {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #fcf8e6;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #e4c62c;
+  margin-left: auto;
+}
+@media (max-width: 992px) {
+  .Dashboards .left .box-users .PlayersTable tr:not(:last-child) {
+    position: relative;
+    border-bottom: 1px solid #004077;
+  }
+  .Dashboards .left .box-users .PlayersTable tr td {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+  }
+  .Dashboards .left .box-users .PlayersTable tr td::before {
+    position: absolute;
+    content: attr(data-label);
+    left: 0;
+  }
+  .Dashboards .left .box-users .PlayersTable .user_Id_Data {
+    flex-direction: row-reverse;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Dashboards right
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Dashboards > .right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 350px;
+  width: 350px;
+  max-width: 100%;
+}
+.Dashboards > .right .boxOffer1,
+.Dashboards > .right .boxOffer2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--main-border-radius);
+  background-color: #002749;
+  overflow: hidden;
+}
+
+.Dashboards > .right .boxOffer1::before,
+.Dashboards > .right .boxOffer2::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.Dashboards > .right .boxOffer1::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.Dashboards > .right .boxOffer2::before {
+  background-color: rgba(0, 0, 0, 0.29);
+}
+.Dashboards > .right .boxOffer1 {
+  height: 300px;
+  background-image: url("../../../../public/Offer1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.Dashboards > .right .boxOffer2 {
+  height: 350px;
+  background-image: url("../../../../public/Offer2.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+@media (max-width: 992px) {
+  .Dashboards > .right {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+  .Dashboards > .right .boxOffer1,
+  .Dashboards > .right .boxOffer2 {
+    height: 100%;
+    min-height: 350px;
+    width: 100%;
+  }
+}
+.Dashboards > .right .overlay {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+.Dashboards > .right .boxOffer1 .overlay {
+  background-color: #2b608ed8;
+}
+.Dashboards > .right .boxOffer1 .overlay h1 {
+  position: relative;
+  font-size: 30px;
+  font-weight: 400;
+  color: #e6ecf1;
+}
+.Dashboards > .right .boxOffer1 .overlay p {
+  position: relative;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 19.52px;
+  text-align: center;
+  color: #e6e7e8;
+}
+.Dashboards > .right .boxOffer2 .overlay {
+  background-color: #0027496a;
+  width: 100%;
+}
+.Dashboards > .right .boxOffer2 .overlay h1 {
+  color: #e6ecf1;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: left;
+}
+.MuiChartsLegend-root {
+  display: none !important;
+}
