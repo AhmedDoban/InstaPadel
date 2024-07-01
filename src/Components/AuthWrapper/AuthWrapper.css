@@ -1,0 +1,49 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Page Wrapper
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.PageWrapper {
+  position: relative;
+  width: 100%;
+  padding: 20px 50px;
+  transition: var(--main-transition);
+}
+@media (max-width: 992px) {
+  .PageWrapper {
+    padding: 0;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Page container
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.PageWrapper .page-container {
+  position: relative;
+  display: flex;
+  gap: 50px;
+}
+@media (max-width: 992px) {
+  .PageWrapper .page-container {
+    gap: 15px;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Page Content
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.PageWrapper .Page-Content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .PageWrapper .Page-Content {
+    gap: 15px;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Page Content wrapper
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.PageWrapper .content-wrapper {
+  position: relative;
+  padding-bottom: var(--main-padding-bottom);
+}

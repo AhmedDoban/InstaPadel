@@ -1,8 +1,13 @@
+"use client";
 import Image from "next/image";
 import "./Login.css";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { UserLogin } from "@/Toolkit/Slices/UserSlice";
 
 function Login() {
+  const Dispatch = useDispatch();
+
   return (
     <div className="Login">
       <div className="container">
@@ -39,7 +44,7 @@ function Login() {
               <Link href="/ForgotPassword">Forgot Password?</Link>
             </div>
             <div className="Action-button">
-              <button>Login</button>
+              <button onClick={() => Dispatch(UserLogin())}>Login</button>
             </div>
           </div>
         </div>

@@ -1,4 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@font-face {
+  font-family: Rubik;
+  src: url("./Font/Rubik-Light.ttf") format(truetype);
+  font-weight: 300;
+}
+@font-face {
+  font-family: Rubik;
+  src: url("./Font/Rubik-Medium.ttf") format(truetype);
+  font-weight: 500;
+}
+@font-face {
+  font-family: Rubik;
+  src: url("./Font/Rubik-Regular.ttf") format(truetype);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Rubik;
+  src: url("./Font/Rubik-SemiBold.ttf") format(truetype);
+  font-weight: 600;
+}
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # General elements
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
@@ -9,7 +28,7 @@
 }
 
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: Rubik;
 }
 html {
   scroll-behavior: smooth;
@@ -78,6 +97,7 @@ p {
   left: 0;
   width: 100%;
   height: 100vh;
+  z-index: 9999;
 }
 .Loding .container {
   position: relative;
@@ -88,39 +108,5 @@ p {
 }
 .Loding .container h1 {
   position: relative;
-  color: var(--main-color);
-  font-family: cursive;
-}
-
-/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-# Main tilte
-ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.Main-title {
-  position: relative;
-  width: fit-content;
-  padding: 0 0 20px 0;
-  color: var(--main-color);
-  font-size: 28px;
-  transition: var(--main-transition);
-}
-
-.Main-title::before,
-.Main-title::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  height: 5px;
-  border-radius: var(--main-border-radius);
-  transition: var(--main-transition);
-}
-.Main-title::before {
-  width: 50%;
-  background-color: var(--main-color);
-  z-index: 2;
-}
-.Main-title::after {
-  width: 100%;
-  background-color: var(--white-alt-1);
-  z-index: 1;
+  color: #767676;
 }

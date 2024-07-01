@@ -1,7 +1,11 @@
+import AuthWrapper from "@/Components/AuthWrapper/AuthWrapper";
+import Dashboards from "./Dashboards/Dashboards";
 
 function Auth() {
   return (
-    <div>Auth</div>
-  )
+    <AuthWrapper>
+      <Dashboards />
+    </AuthWrapper>
+  );
 }
-export default Auth
+export default Auth;

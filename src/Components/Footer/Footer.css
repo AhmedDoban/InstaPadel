@@ -1,0 +1,154 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Footer
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Footer {
+  position: relative;
+  width: 100%;
+  background-color: #f7f9fb;
+  padding: 20px 30px 20px 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: var(--main-transition);
+}
+@media (max-width: 992px) {
+  .Footer {
+    border-radius: 10px 0 0 10px;
+  }
+}
+.Footer::before {
+  position: absolute;
+  content: "";
+  width: 55px;
+  height: 346.6px;
+  background-color: #e6ecf1;
+  top: -75px;
+  right: 45px;
+  transform: rotate(36.69deg);
+  transition: var(--main-transition);
+  opacity: 0.5;
+}
+.Footer::after {
+  position: absolute;
+  content: "";
+  width: 55px;
+  height: 346.6px;
+  background-color: #e6ecf1;
+  top: -75px;
+  left: 15px;
+  transform: rotate(36.69deg);
+  opacity: 0.5;
+  transition: var(--main-transition);
+}
+@media (max-width: 992px) {
+  .Footer::before {
+    top: -50px;
+    right: 0px;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Footer footer content
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Footer .Footer-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  z-index: 1;
+  border-bottom: 1px solid #e6ecf1;
+  padding-bottom: 20px;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Footer footer content logo
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Footer .Footer-content .logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.Footer .Footer-content .logo img {
+  position: relative;
+  border-radius: var(--main-border-radius);
+  width: 37px;
+  height: auto;
+}
+.Footer .Footer-content .logo h1 {
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23.7px;
+  text-align: left;
+  color: #004077;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Footer footer contact
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Footer .Footer-content .contact {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  transition: var(--main-transition);
+}
+@media (max-width: 772px) {
+  .Footer .Footer-content .contact {
+    gap: 20px;
+  }
+}
+.Footer .Footer-content .contact a {
+  position: relative;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+  color: #6d747b;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Footer footer social
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Footer .Footer-content .social {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.Footer .Footer-content .social i {
+  color: #989da2;
+  font-size: 20px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.Footer .Footer-content .social i:hover {
+  color: #004077;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Footer copyright
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Footer .copyright {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 20px;
+  z-index: 1;
+}
+@media (max-width: 992px) {
+  .Footer .copyright {
+    padding-top: 5px;
+  }
+}
+.Footer .copyright span {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: left;
+  color: #6b90b0;
+}

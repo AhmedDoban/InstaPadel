@@ -1,0 +1,255 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Header
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Header {
+  position: relative;
+  width: 100%;
+  background-color: #f7f9fb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 30px;
+  border-radius: 8px;
+  gap: 10px;
+}
+@media (max-width: 992px) {
+  .Header {
+    padding: 0 10px;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Header notification
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Header .notification {
+  position: relative;
+  color: #004077;
+}
+.Header .notification::before {
+  position: absolute;
+  content: "2";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6de06;
+  color: #fff;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  font-size: 11px;
+  top: -8px;
+  right: -9px;
+  border: 1px solid #fcf8e6;
+}
+.Header .search {
+  position: relative;
+  padding: 0 20px;
+  background-color: #ffffff;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+  min-width: 50%;
+}
+
+.Header .search::before {
+  content: "\f002";
+  font-family: var(--fa-style-family-classic);
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #8e9396;
+}
+.Header input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: var(--main-border-radius);
+  transition: var(--main-transition);
+  padding: 10px 0 10px 20px;
+  background-color: transparent;
+}
+.Header input:focus {
+  width: 100%;
+  border: 0;
+  outline: 0;
+}
+.Header input::placeholder {
+  color: #8e9396;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Header notification
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Header img {
+  width: 32px;
+  height: auto;
+}
+
+.Header .icons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100%;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Header action
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Header .action {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.Header .action .information {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.Header .action .information img {
+  position: relative;
+  border-radius: 50%;
+}
+.Header .action .information .UserInfo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 992px) {
+  .Header .action > .information .UserInfo {
+    display: none;
+  }
+}
+
+.Header .action .information .UserInfo h1 {
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2b608e;
+}
+.Header .action .information .UserInfo p {
+  font-size: 12px;
+  font-weight: 300;
+  color: #737c81;
+}
+.Header .action > .information h1 {
+  position: relative;
+  color: #2f3942 !important;
+  font-size: 14px !important;
+  font-weight: 300 !important;
+}
+.Header .action > .information p {
+  font-size: 10px !important;
+  font-weight: 300 !important;
+  color: #6d747b !important;
+}
+.Header .action .other-links {
+  position: absolute;
+  min-width: 200px;
+  max-width: 200px;
+  background-color: #f7f9fb;
+  padding: 10px 0;
+  top: 100%;
+  transition: var(--main-transition);
+  border-radius: 0 0 10px 10px;
+  z-index: 99;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+.Header .action .other-links.Notification-content {
+  gap: 10px;
+  padding: 10px;
+}
+.Header .action .other-links.Notification-content ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Header .action .other-links.Notification-content ul li {
+  position: relative;
+  display: flex;
+  gap: 5px;
+  align-items: flex-start;
+  max-width: 100%;
+  overflow: hidden;
+  transition: var(--main-transition);
+  padding: 10px 20px 10px 10px;
+  border-radius: var(--main-border-radius);
+}
+.Header .action .other-links.Notification-content ul li:hover {
+  background-color: #e5e5e5;
+}
+.Header .action .other-links.Notification-content ul li span {
+  position: relative;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  overflow: hidden;
+  width: 120px;
+  display: flex;
+  font-size: 12px;
+  font-weight: 300;
+  color: #37434a;
+  transition: var(--main-transition);
+}
+.Header .action .other-links.Notification-content ul li:hover span {
+  text-wrap: wrap;
+}
+.Header .action .other-links.Notification-content ul li img {
+  width: 20px;
+  height: 20px;
+}
+.Header .action .other-links.Notification-content ul li p {
+  font-size: 10px;
+  font-weight: 400;
+  color: #737c81;
+}
+.Header .action .other-links > h3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21.33px;
+  text-align: left;
+  color: #004077;
+}
+.Header .action .other-links li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 0.5px solid #e6ecf1;
+}
+.Header .action .other-links li .information {
+  padding: 0 10px;
+}
+.Header .action.open .overlay {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: var(--main-transition);
+  z-index: 1;
+}
+.Header .action .other-links li a img {
+  position: relative;
+  width: 18px;
+  height: auto;
+}
+.Header .action .other-links li a span {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  color: #37434a;
+}
