@@ -6,8 +6,8 @@ function Box1({ SetBoxView }) {
       <div className="ResetBox">
         <h1>Forgotten your password?</h1>
         <p>
-          There is nothing to worry about, we'll send you a message to help you
-          reset your password.
+          There is nothing to worry about, we&apos;ll send you a message to help
+          you reset your password.
         </p>
         <div className="input-box">
           <label htmlFor="PhoneNumber">

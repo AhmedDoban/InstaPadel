@@ -16,19 +16,17 @@ function Dashboards() {
   ];
 
   const operatingSystems = [
-    "Linux",
-    "Mac",
-    "iOS",
-    "Windows",
-    "Android",
-    "Other",
+    { id: 1, value: 18034, label: "Linux", color: "#95A4FC" },
+    { id: 2, value: 24567, label: "Mac", color: "#BAEDBD" },
+    { id: 3, value: 12789, label: "iOS", color: "#1C1C1C" },
+    { id: 4, value: 21904, label: "Windows", color: "#B1E3FF" },
+    { id: 5, value: 15234, label: "Android", color: "#A8C5DA" },
+    { id: 6, value: 17546, label: "Other", color: "#A1E3CB" },
   ];
-
-  const OSData = [18034, 24567, 12789, 21904, 15234, 17546];
 
   return (
     <div className="Dashboards">
-      <div className="right">
+      <div className="Dashboardsright">
         <div className="boxOffer1">
           <div className="overlay">
             <h1>Offer 55%</h1>
@@ -44,9 +42,8 @@ function Dashboards() {
             <h1>Offer 40%</h1>
           </div>
         </div>
-        <div className="box"></div>
       </div>
-      <div className="left">
+      <div className="Dashboardsleft">
         <div className="box-users">
           <div className="head-box">
             <div className="left">
@@ -109,32 +106,77 @@ function Dashboards() {
           </table>
         </div>
         <div className="status-container">
-          <div className="box"></div>
+          <div className="box">
+            <h3>Traffic by Device</h3>
+            <div className="Bar-chart">
+              <div className="Y-ax">
+                <span className="Empty"></span>
+                <span>0</span>
+                <span>10K</span>
+                <span>20K</span>
+                <span>30K</span>
+              </div>
+              <div className="X-ax">
+                {operatingSystems.map((OS) => (
+                  <div className="X-Data">
+                    <p>
+                      <span
+                        className="progress"
+                        style={{
+                          height: `${(OS.value / 30000) * 100}%`,
+                          backgroundColor: OS.color,
+                        }}
+                      ></span>
+                    </p>
+                    <span>{OS.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
           <div className="box">
             <h3>Traffic by Location</h3>
-            <PieChart
-              width={400}
-              height={400}
-              series={[
-                {
-                  data: data,
-                  innerRadius: 46,
-                  outerRadius: 87,
-                  paddingAngle: 2,
-                  cornerRadius: 6,
-                  startAngle: 180,
-                  endAngle: -180,
-                  cx: 150,
-                  cy: 150,
-                  highlightScope: { faded: "global", highlighted: "item" },
-                  faded: {
-                    innerRadius: 30,
-                    additionalRadius: -30,
-                    color: "gray",
-                  },
-                },
-              ]}
-            />
+            <div className="Chart-container">
+              <div className="Pie-Chart">
+                <PieChart
+                  width={150}
+                  height={150}
+                  series={[
+                    {
+                      data: data,
+                      innerRadius: 30,
+                      outerRadius: 65,
+                      paddingAngle: 2,
+                      cornerRadius: 5,
+                      startAngle: 180,
+                      endAngle: -180,
+                      cx: 75,
+                      cy: 75,
+                      highlightScope: { faded: "global", highlighted: "item" },
+                      faded: {
+                        innerRadius: 30,
+                        additionalRadius: -10,
+                      },
+                    },
+                  ]}
+                />
+              </div>
+              <div className="Pie-Chart-content">
+                {data.map((Sta, index) => (
+                  <div className="Pie-Chart-box" key={index}>
+                    <div className="info">
+                      <div
+                        className="over-Color"
+                        style={{ backgroundColor: Sta.color }}
+                      ></div>
+                      <h2>{Sta.label}</h2>
+                    </div>
+
+                    <span>{Sta.value}%</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

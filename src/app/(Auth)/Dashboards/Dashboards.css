@@ -4,12 +4,12 @@
 .Dashboards {
   position: relative;
   width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: row-reverse;
   gap: 30px;
-  padding: 0 10px 0 0;
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .Dashboards {
     flex-direction: column-reverse;
     gap: 10px;
@@ -18,17 +18,18 @@
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # Dashboards left
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.Dashboards > .left {
+.Dashboards > .Dashboardsleft {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 100%;
+  max-width: 100%;
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # Dashboards left Boxusers
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.Dashboards .left .box-users {
+.Dashboards .Dashboardsleft .box-users {
   position: relative;
   background-color: #f7f9fb;
   border-radius: 10px;
@@ -38,7 +39,7 @@
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # Dashboards left boxUsers head
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.Dashboards .left .box-users .head-box {
+.Dashboards .Dashboardsleft .box-users .head-box {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -47,18 +48,19 @@
   padding: 0 0 20px 0;
 }
 
-.Dashboards .left .box-users .head-box .left {
+.Dashboards .Dashboardsleft .box-users .head-box .left {
   position: relative;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
 }
 @media (max-width: 992px) {
-  .Dashboards .left .box-users .head-box .left {
+  .Dashboards .Dashboardsleft .box-users .head-box .left {
     gap: 5px;
   }
 }
-.Dashboards .left .box-users .head-box .left .serch-box {
+.Dashboards .Dashboardsleft .box-users .head-box .left .serch-box {
   position: relative;
   background-color: #ffffff;
   padding: 5px;
@@ -68,7 +70,7 @@
   align-items: center;
   gap: 5px;
 }
-.Dashboards .left .box-users .head-box .left .serch-box input {
+.Dashboards .Dashboardsleft .box-users .head-box .left .serch-box input {
   position: relative;
   background-color: transparent;
   border: 0;
@@ -83,48 +85,53 @@
   line-height: 20px;
   color: #1c1c1c33;
 }
-.Dashboards .left .box-users .head-box .left .serch-box i {
+.Dashboards .Dashboardsleft .box-users .head-box .left .serch-box i {
   color: #1c1c1c33;
 }
-.Dashboards .left .box-users .head-box .right {
+.Dashboards .Dashboardsleft .box-users .head-box .right {
   position: relative;
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.Dashboards .left .box-users .head-box .right h1 {
+@media (max-width: 772px) {
+  .Dashboards .Dashboardsleft .box-users .head-box .right {
+    flex-direction: column;
+  }
+}
+.Dashboards .Dashboardsleft .box-users .head-box .right h1 {
   font-size: 20px;
   font-weight: 600;
   text-align: left;
   color: #004077;
 }
 @media (max-width: 992px) {
-  .Dashboards .left .box-users .head-box .right h1 {
-    font-size: 14px;
+  .Dashboards .Dashboardsleft .box-users .head-box .right h1 {
+    font-size: 20px;
   }
 }
-.Dashboards .left .box-users .head-box .right span {
+.Dashboards .Dashboardsleft .box-users .head-box .right span {
   font-size: 14px;
   font-weight: 400;
   color: #6b90b0;
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-# Dashboards .left
+# Dashboards .left box-users PlayersTable
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.Dashboards .left .box-users .PlayersTable {
+.Dashboards .Dashboardsleft .box-users .PlayersTable {
   position: relative;
   width: 100%;
   text-align: left;
   border-spacing: 0;
 }
 @media (max-width: 992px) {
-  .Dashboards .left .box-users .PlayersTable {
+  .Dashboards .Dashboardsleft .box-users .PlayersTable {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
   }
 }
-.Dashboards .left .box-users .PlayersTable .TableHead th {
+.Dashboards .Dashboardsleft .box-users .PlayersTable .TableHead th {
   position: relative;
   padding: 10px 0;
   border-bottom: 1px solid #e6ecf1;
@@ -133,25 +140,30 @@
   font-size: 16px;
   font-weight: 600;
 }
-.Dashboards .left .box-users .PlayersTable .TableHead th:nth-child(4) {
+.Dashboards
+  .Dashboardsleft
+  .box-users
+  .PlayersTable
+  .TableHead
+  th:nth-child(4) {
   position: relative;
   width: fit-content;
   width: 50px;
 }
 @media (max-width: 992px) {
-  .Dashboards .left .box-users .PlayersTable .TableHead {
+  .Dashboards .Dashboardsleft .box-users .PlayersTable .TableHead {
     display: none;
   }
 }
 
-.Dashboards .left .box-users .PlayersTable tr td {
+.Dashboards .Dashboardsleft .box-users .PlayersTable tr td {
   position: relative;
   padding: 5px 0;
 }
-.Dashboards .left .box-users .PlayersTable tr:nth-child(2) td {
+.Dashboards .Dashboardsleft .box-users .PlayersTable tr:nth-child(2) td {
   padding: 15px 0 5px 0 !important;
 }
-.Dashboards .left .box-users .PlayersTable .user_Id_Data {
+.Dashboards .Dashboardsleft .box-users .PlayersTable .user_Id_Data {
   position: relative;
   display: flex;
   align-items: center;
@@ -160,13 +172,13 @@
   font-weight: 300;
   color: #2f3942;
 }
-.Dashboards .left .box-users .PlayersTable .user_Id_Data img {
+.Dashboards .Dashboardsleft .box-users .PlayersTable .user_Id_Data img {
   position: relative;
   width: 35px;
   height: 35px;
   border-radius: 50%;
 }
-.Dashboards .left .box-users .PlayersTable tr td.FullName span {
+.Dashboards .Dashboardsleft .box-users .PlayersTable tr td.FullName span {
   position: relative;
   background-color: #f2fce6;
   width: fit-content;
@@ -177,14 +189,14 @@
   font-weight: 400;
   border-radius: 94px;
 }
-.Dashboards .left .box-users .PlayersTable tr td.UserName {
+.Dashboards .Dashboardsleft .box-users .PlayersTable tr td.UserName {
   position: relative;
   font-size: 14px;
   font-weight: 400;
   color: #002749;
 }
 
-.Dashboards .left .box-users .PlayersTable tr td.Level span {
+.Dashboards .Dashboardsleft .box-users .PlayersTable tr td.Level span {
   position: relative;
   font-size: 14px;
   font-weight: 400;
@@ -199,39 +211,218 @@
   margin-left: auto;
 }
 @media (max-width: 992px) {
-  .Dashboards .left .box-users .PlayersTable tr:not(:last-child) {
+  .Dashboards .Dashboardsleft .box-users .PlayersTable tr:not(:last-child) {
     position: relative;
     border-bottom: 1px solid #004077;
   }
-  .Dashboards .left .box-users .PlayersTable tr td {
+  .Dashboards .Dashboardsleft .box-users .PlayersTable tr td {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: flex-end;
   }
-  .Dashboards .left .box-users .PlayersTable tr td::before {
+  .Dashboards .Dashboardsleft .box-users .PlayersTable tr td::before {
     position: absolute;
     content: attr(data-label);
     left: 0;
   }
-  .Dashboards .left .box-users .PlayersTable .user_Id_Data {
+  .Dashboards .Dashboardsleft .box-users .PlayersTable .user_Id_Data {
     flex-direction: row-reverse;
   }
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Dashboards .left status-container
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Dashboards .Dashboardsleft .status-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.Dashboards .Dashboardsleft .status-container .box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f7f9fb;
+  padding: 20px;
+  border-radius: 17.67px;
+}
+.Dashboards .Dashboardsleft .status-container .box h3 {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22.4px;
+  text-align: left;
+  color: #1c1c1c;
+}
+.Dashboards .Dashboardsleft .status-container .box .Chart-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+}
+@media (max-width: 772px) {
+  .Dashboards .Dashboardsleft .status-container .box .Chart-container {
+    flex-direction: column;
+  }
+}
+.Dashboards .Dashboardsleft .status-container .box .Pie-Chart-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Dashboards .Dashboardsleft .status-container .box .Pie-Chart-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 100%;
+}
+.Dashboards .Dashboardsleft .status-container .box .Pie-Chart-box h2 {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 26.44px;
+  text-align: left;
+  color: #1c1c1c;
+}
+.Dashboards .Dashboardsleft .status-container .box .Pie-Chart-box span {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 26.44px;
+  color: #1c1c1c;
+  text-align: left;
+}
+
+.Dashboards .Dashboardsleft .status-container .box .Pie-Chart-box .info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.Dashboards .Dashboardsleft .status-container .box .Pie-Chart-box .over-Color {
+  position: relative;
+  width: 6px;
+  min-width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Dashboards .left status-container Bar chart
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Dashboards .Dashboardsleft .status-container .Bar-chart {
+  position: relative;
+  display: flex;
+  gap: 0px;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.Dashboards .Dashboardsleft .status-container .Bar-chart .Y-ax {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.Dashboards .Dashboardsleft .status-container .Bar-chart .Y-ax span {
+  position: relative;
+  height: 47px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  font-weight: 300;
+  color: #1c1c1c60;
+}
+.Dashboards .Dashboardsleft .status-container .Bar-chart .Y-ax span.Empty {
+  height: 10px;
+}
+.Dashboards .Dashboardsleft .status-container .Bar-chart .X-ax {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+}
+.Dashboards
+  .Dashboardsleft
+  .status-container
+  .Bar-chart
+  .X-ax::-webkit-scrollbar {
+  height: 2px;
+}
+.Dashboards .Dashboardsleft .status-container .Bar-chart .X-ax .X-Data {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+.Dashboards .Dashboardsleft .status-container .Bar-chart .X-ax .X-Data p {
+  position: relative;
+  width: 25px;
+  height: 100%;
+  border-radius: 8px;
+  display: flex;
+  cursor: pointer;
+  transition: var(--main-transition);
+  overflow: hidden;
+}
+.Dashboards
+  .Dashboardsleft
+  .status-container
+  .Bar-chart
+  .X-ax
+  .X-Data
+  p
+  span.progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: var(--main-transition);
+  border-radius: 8px;
+}
+.Dashboards
+  .Dashboardsleft
+  .status-container
+  .Bar-chart
+  .X-Data
+  span.progress:hover {
+  background-color: #1c1c1cbe !important;
+}
+.Dashboards .Dashboardsleft .status-container .Bar-chart .X-ax .X-Data span {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  color: #1c1c1c60;
+  width: 53px;
+  text-align: center;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # Dashboards right
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.Dashboards > .right {
+.Dashboards > .Dashboardsright {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  min-width: 350px;
-  width: 350px;
-  max-width: 100%;
+  max-width: 30%;
 }
-.Dashboards > .right .boxOffer1,
-.Dashboards > .right .boxOffer2 {
+
+.Dashboards > .Dashboardsright .boxOffer1,
+.Dashboards > .Dashboardsright .boxOffer2 {
   position: relative;
   display: flex;
   justify-content: center;
@@ -241,8 +432,8 @@
   overflow: hidden;
 }
 
-.Dashboards > .right .boxOffer1::before,
-.Dashboards > .right .boxOffer2::before {
+.Dashboards > .Dashboardsright .boxOffer1::before,
+.Dashboards > .Dashboardsright .boxOffer2::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -250,40 +441,42 @@
   top: 0;
   left: 0;
 }
-.Dashboards > .right .boxOffer1::before {
+.Dashboards > .Dashboardsright .boxOffer1::before {
   background-color: rgba(0, 0, 0, 0.2);
 }
-.Dashboards > .right .boxOffer2::before {
+.Dashboards > .Dashboardsright .boxOffer2::before {
   background-color: rgba(0, 0, 0, 0.29);
 }
-.Dashboards > .right .boxOffer1 {
+.Dashboards > .Dashboardsright .boxOffer1 {
   height: 300px;
   background-image: url("../../../../public/Offer1.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
-.Dashboards > .right .boxOffer2 {
+.Dashboards > .Dashboardsright .boxOffer2 {
   height: 350px;
   background-image: url("../../../../public/Offer2.jpeg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
-@media (max-width: 992px) {
-  .Dashboards > .right {
+@media (max-width: 1200px) {
+  .Dashboards > .Dashboardsright {
     width: 100%;
+    max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
-  .Dashboards > .right .boxOffer1,
-  .Dashboards > .right .boxOffer2 {
+  .Dashboards > .Dashboardsright .boxOffer1,
+  .Dashboards > .Dashboardsright .boxOffer2 {
     height: 100%;
     min-height: 350px;
     width: 100%;
   }
 }
-.Dashboards > .right .overlay {
+
+.Dashboards > .Dashboardsright .overlay {
   position: relative;
   padding: 20px;
   display: flex;
@@ -293,16 +486,16 @@
   gap: 10px;
   text-align: center;
 }
-.Dashboards > .right .boxOffer1 .overlay {
+.Dashboards > .Dashboardsright .boxOffer1 .overlay {
   background-color: #2b608ed8;
 }
-.Dashboards > .right .boxOffer1 .overlay h1 {
+.Dashboards > .Dashboardsright .boxOffer1 .overlay h1 {
   position: relative;
   font-size: 30px;
   font-weight: 400;
   color: #e6ecf1;
 }
-.Dashboards > .right .boxOffer1 .overlay p {
+.Dashboards > .Dashboardsright .boxOffer1 .overlay p {
   position: relative;
   font-size: 10px;
   font-weight: 400;
@@ -310,11 +503,11 @@
   text-align: center;
   color: #e6e7e8;
 }
-.Dashboards > .right .boxOffer2 .overlay {
+.Dashboards > .Dashboardsright .boxOffer2 .overlay {
   background-color: #0027496a;
   width: 100%;
 }
-.Dashboards > .right .boxOffer2 .overlay h1 {
+.Dashboards > .Dashboardsright .boxOffer2 .overlay h1 {
   color: #e6ecf1;
   font-size: 30px;
   font-weight: 400;
