@@ -2,7 +2,7 @@ function loading() {
   return (
     <div className="Loding">
       <div className="container">
-        <h1>Loding ... </h1>
+        <h1>Loding</h1>
       </div>
     </div>
   );

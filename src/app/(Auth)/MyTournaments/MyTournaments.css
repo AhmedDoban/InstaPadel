@@ -1,0 +1,97 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# MyTournaments
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.MyTournaments {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.MyTournaments .MyTournaments-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 20px;
+}
+@media (max-width: 992px) {
+  .MyTournaments .MyTournaments-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+.MyTournaments .MyTournaments-container .Tournament-Card {
+  position: relative;
+  width: 100%;
+  background-color: #f7f9fb;
+  border-radius: 10px;
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.MyTournaments .MyTournaments-container .Tournament-Card .Head {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px dashed #e6ecf1;
+  padding-bottom: 10px;
+}
+.MyTournaments .MyTournaments-container .Tournament-Card .Head h1 {
+  position: relative;
+  font-size: 22px;
+  font-weight: 500;
+  color: #004077;
+}
+.MyTournaments .MyTournaments-container .Tournament-Card .Head .counter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+.MyTournaments .MyTournaments-container .Tournament-Card .Head .counter p {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1c1c1c;
+}
+
+.MyTournaments .MyTournaments-container .Tournament-Card .Head .counter span {
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  color: #96e72b;
+}
+
+.MyTournaments .MyTournaments-container .Tournament-Card .TourBody {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+.MyTournaments .MyTournaments-container .Tournament-Card .TourBody .box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.MyTournaments .MyTournaments-container .Tournament-Card .TourBody .box p {
+  position: relative;
+  font-size: 16px;
+  font-weight: 300;
+  color: #6d747b;
+}
+
+.MyTournaments .MyTournaments-container .Tournament-Card .TourStatus {
+  position: relative;
+  padding: 20px 0 10px 0;
+}
+.MyTournaments .MyTournaments-container .Tournament-Card .TourStatus span {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  color: #37434a;
+}

@@ -47,7 +47,7 @@ function Dashboards() {
         <div className="box-users">
           <div className="head-box">
             <div className="left">
-              <MainTitle>Players</MainTitle>
+              <MainTitle Weight={600}>Players</MainTitle>
               <div className="serch-box">
                 <label htmlFor="SearchUsers">
                   <i className="fa-solid fa-magnifying-glass"></i>
