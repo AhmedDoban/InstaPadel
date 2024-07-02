@@ -117,8 +117,8 @@ function Dashboards() {
                 <span>30K</span>
               </div>
               <div className="X-ax">
-                {operatingSystems.map((OS) => (
-                  <div className="X-Data">
+                {operatingSystems.map((OS, index) => (
+                  <div className="X-Data" key={index}>
                     <p>
                       <span
                         className="progress"
