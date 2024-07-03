@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import "./MultiRound.css";
 
-function MultiRound({ ImageSrc, uploadImage, SetPageLoaded }) {
+function MultiRound({ ImageSrcMulti, uploadImageMulti, SetPageLoaded }) {
   const options = [
     { value: 1, label: "Cairo" },
     { value: 2, label: "Alexandria" },
@@ -44,7 +44,9 @@ function MultiRound({ ImageSrc, uploadImage, SetPageLoaded }) {
         <div className="Multi-left">
           <label className="Image-Multi" htmlFor="TourMultiImage">
             <Image
-              src={ImageSrc ? ImageSrc : "/CreateTournament/Avatar.svg"}
+              src={
+                ImageSrcMulti ? ImageSrcMulti : "/CreateTournament/Avatar.svg"
+              }
               alt="Multi"
               width={50}
               height={50}
@@ -54,7 +56,7 @@ function MultiRound({ ImageSrc, uploadImage, SetPageLoaded }) {
               name="TourMulti"
               id="TourMultiImage"
               hidden
-              onChange={(e) => uploadImage(e)}
+              onChange={(e) => uploadImageMulti(e)}
             />
             <div className="label-info">
               <span>

@@ -47,3 +47,364 @@
     align-items: center;
   }
 }
+
+.TournamentType .DropDownSelect:focus {
+  outline: 0 !important;
+  border: 0 !important;
+  box-shadow: 0 0 0 0px rgba(255, 255, 255, 0) !important;
+}
+
+.css-wmy1p7-ReactDropdownSelect:focus,
+.css-wmy1p7-ReactDropdownSelect:focus-within {
+  box-shadow: 0 0 0 0px rgba(255, 255, 255, 0) !important;
+}
+.TournamentType
+  .TournamentType-box
+  input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url("../../../../../../public/CreateTournament/Date.svg")
+    no-repeat;
+  width: 15px;
+  height: 15px;
+  border-width: thin;
+  background-size: contain;
+  cursor: pointer;
+}
+.TournamentType
+  .TournamentType-box
+  input[type="time"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url("../../../../../../public/CreateTournament/Time.svg")
+    no-repeat;
+  width: 15px;
+  height: 15px;
+  border-width: thin;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.TournamentType .TournamentType-box .Multi-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+.TournamentType .TournamentType-box .Multi-Flex {
+  position: relative;
+  display: flex;
+  gap: 15px;
+}
+@media (max-width: 772px) {
+  .TournamentType .TournamentType-box .Multi-Flex {
+    flex-direction: column;
+  }
+}
+.TournamentType .TournamentType-box .Multi-box .input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e7e8e9;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  height: 50px;
+}
+.TournamentType .TournamentType-box .Multi-box .input-boxDropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  border: 1px solid #e7e8e9;
+  border-radius: 8px;
+  padding: 3px 10px;
+  height: 50px;
+}
+.TournamentType .TournamentType-box .Multi-box .dropDownSelect-box {
+  position: relative;
+  width: 100%;
+}
+.TournamentType .TournamentType-box .Multi-box label {
+  position: relative;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 23.94px;
+  text-align: left;
+  color: #545f71;
+}
+.TournamentType .TournamentType-box .Multi-box .input-box input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  transition: var(--main-transition);
+  color: #545f71;
+  font-size: 16px;
+  font-weight: 300;
+}
+.TournamentType .TournamentType-box .Multi-box .input-box.textArea {
+  height: auto;
+}
+.TournamentType .TournamentType-box .Multi-box .input-box textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  border: 0;
+  outline: 0;
+}
+.TournamentType .TournamentType-box .Multi-box .input-box img {
+  width: 20px;
+  height: 20px;
+}
+
+.TournamentType .TournamentType-box .Multi-box button {
+  position: relative;
+  width: 50%;
+  background-color: #81e200;
+  border: 0;
+  height: 50px;
+  border-radius: 10px;
+  transition: var(--main-transition);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+@media (max-width: 1200px) {
+  .TournamentType .TournamentType-box .Multi-box button {
+    width: 100%;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Multi-Round Multi-Round-box left
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.TournamentType .TournamentType-box .Multi-left {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.TournamentType .TournamentType-box .Multi-left .Multi-Head {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.TournamentType .TournamentType-box .Multi-left .Multi-Head .input-toggle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 15px;
+}
+.TournamentType .TournamentType-box .Multi-left .Multi-Head .input-toggle p {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b90b0;
+}
+.TournamentType
+  .TournamentType-box
+  .Multi-left
+  .Multi-Head
+  .input-toggle
+  label {
+  position: relative;
+  width: 40px;
+  height: 25px;
+  background-color: #d8dae5;
+  display: flex;
+  border-radius: 120px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.TournamentType
+  .TournamentType-box
+  .Multi-left
+  .Multi-Head
+  .input-toggle
+  label::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  top: 50%;
+  right: 17.5px;
+  transform: translateY(-50%);
+  transition: var(--main-transition);
+}
+.TournamentType
+  .TournamentType-box
+  .Multi-left
+  .Multi-Head
+  input:checked
+  + label::before {
+  right: 2.5px;
+}
+.TournamentType
+  .TournamentType-box
+  .Multi-left
+  .Multi-Head
+  .input-toggle
+  input:checked
+  + label {
+  background-color: #2b608e;
+}
+
+.TournamentType .TournamentType-box .Multi-left .Image-Multi {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.TournamentType .TournamentType-box .Multi-left .Image-Multi > img {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #e6e7e8;
+}
+.TournamentType .TournamentType-box .Multi-left .label-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.TournamentType .TournamentType-box .Multi-left .label-info span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #545f71;
+}
+.TournamentType .TournamentType-box .Multi-left .label-info span img {
+  width: 15px;
+  height: auto;
+}
+.TournamentType .TournamentType-box .Multi-left .label-info p {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  color: #545f71;
+  margin: 0;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Multi-Round Multi-Round-box right
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.TournamentType .TournamentType-box .Multi-right {
+  position: relative;
+  min-width: 400px;
+  width: 400px;
+  max-width: 100%;
+  min-height: 450px;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--main-transition);
+}
+@media (max-width: 1200px) {
+  .TournamentType .TournamentType-box .Multi-right {
+    min-width: 300px;
+    width: 300px;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+
+.TournamentType .TournamentType-box .Multi-right::after {
+  position: absolute;
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease-in-out;
+}
+.TournamentType .TournamentType-box .Multi-right.Singles::after {
+  background-image: url("../../../../../../public/CreateTournament/Singles.jpeg");
+}
+
+.TournamentType .TournamentType-box .Multi-right.Doubles::after {
+  background-image: url("../../../../../../public/CreateTournament/Doubles.jpeg");
+}
+
+.TournamentType .TournamentType-box .Multi-right:hover::after {
+  transform: rotate(15deg) scale(1.7);
+}
+.TournamentType .TournamentType-box .Multi-right::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  left: 0;
+  transition: var(--main-transition);
+}
+.TournamentType .TournamentType-box .Multi-right:hover::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.TournamentType .TournamentType-box .Multi-right span {
+  position: relative;
+  font-size: 35px;
+  font-weight: 400;
+  color: #ffffff;
+  transform: translateX(120%) scale(0.1);
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+@media (max-width: 772px) {
+  .TournamentType .TournamentType-box .Multi-right span {
+    font-size: 30px;
+  }
+}
+.TournamentType .TournamentType-box .Multi-right:hover span {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+.TournamentType .TournamentType-box .Multi-right h1 {
+  position: relative;
+  font-size: 55px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  transition: var(--main-transition);
+}
+@media (max-width: 772px) {
+  .TournamentType .TournamentType-box .Multi-right h1 {
+    font-size: 30px;
+  }
+}
+.TournamentType .TournamentType-box .Multi-right:hover h1 {
+  transform: rotate(15deg);
+}

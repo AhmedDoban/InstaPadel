@@ -6,23 +6,37 @@ import TournamentType from "./TournamentType/TournamentType";
 
 function Page() {
   const [PageLoaded, SetPageLoaded] = useState(1);
-  const [ImageSrc, SetImagerc] = useState(null);
+  const [ImageSrcMulti, SetImageSrcMulti] = useState(null);
+  const [ImageSrcType, SetImageSrcType] = useState(null);
+  const [TourState, SetTourState] = useState(true);
 
-  const uploadImage = (e) => {
+  const uploadImageMulti = (e) => {
     const file = e.target.files[0];
-    SetImagerc(URL.createObjectURL(file));
+    SetImageSrcMulti(URL.createObjectURL(file));
+  };
+  const uploadImageType = (e) => {
+    const file = e.target.files[0];
+    SetImageSrcType(URL.createObjectURL(file));
   };
 
   return (
     <AuthWrapper>
       {PageLoaded === 1 && (
         <MultiRound
-          ImageSrc={ImageSrc}
-          uploadImage={uploadImage}
+          ImageSrcMulti={ImageSrcMulti}
+          uploadImageMulti={uploadImageMulti}
           SetPageLoaded={SetPageLoaded}
         />
       )}
-      {PageLoaded === 2 && <TournamentType SetPageLoaded={SetPageLoaded} />}
+      {PageLoaded === 2 && (
+        <TournamentType
+          SetPageLoaded={SetPageLoaded}
+          uploadImageType={uploadImageType}
+          ImageSrcType={ImageSrcType}
+          TourState={TourState}
+          SetTourState={SetTourState}
+        />
+      )}
     </AuthWrapper>
   );
 }
