@@ -1,0 +1,294 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Multi-Round
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Multi-Round {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Multi-Round > h1 {
+  margin-left: 10px;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Multi-Round NaviGation
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Multi-Round .NaviGation {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: #6d747b;
+  margin-bottom: 10px;
+}
+.Multi-Round .NaviGation a.Active {
+  position: relative;
+  font-weight: 600;
+  color: #2f3942;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Multi-Round Multi-Round-box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Multi-Round .Multi-Round-box {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  box-shadow: 0px 4px 34.4px 0px #0000000f;
+  border-radius: var(--main-border-radius);
+  padding: 30px 0 30px 30px;
+}
+@media (max-width: 1200px) {
+  .Multi-Round .Multi-Round-box {
+    flex-direction: column-reverse;
+    padding: 30px 30px;
+    align-items: center;
+  }
+}
+
+.Multi-Round .DropDownSelect:focus {
+  outline: 0 !important;
+  border: 0 !important;
+  box-shadow: 0 0 0 0px rgba(255, 255, 255, 0) !important;
+}
+.css-16vukcu:focus,
+.css-16vukcu:focus-within {
+  box-shadow: 0 0 0 0px rgba(255, 255, 255, 0) !important;
+}
+.Multi-Round
+  .Multi-Round-box
+  input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url("../../../../../../public/CreateTournament/Date.svg")
+    no-repeat;
+  width: 15px;
+  height: 15px;
+  border-width: thin;
+  background-size: contain;
+  cursor: pointer;
+}
+.Multi-Round
+  .Multi-Round-box
+  input[type="time"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url("../../../../../../public/CreateTournament/Time.svg")
+    no-repeat;
+  width: 15px;
+  height: 15px;
+  border-width: thin;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.Multi-Round .Multi-Round-box .Multi-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+.Multi-Round .Multi-Round-box .Multi-Flex {
+  position: relative;
+  display: flex;
+  gap: 15px;
+}
+@media (max-width: 772px) {
+  .Multi-Round .Multi-Round-box .Multi-Flex {
+    flex-direction: column;
+  }
+}
+.Multi-Round .Multi-Round-box .Multi-box .input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e7e8e9;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  height: 50px;
+}
+.Multi-Round .Multi-Round-box .Multi-box .input-boxDropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  border: 1px solid #e7e8e9;
+  border-radius: 8px;
+  padding: 3px 10px;
+}
+.Multi-Round .Multi-Round-box .Multi-box .dropDownSelect-box {
+  position: relative;
+  width: 100%;
+}
+.Multi-Round .Multi-Round-box .Multi-box .input-box input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  transition: var(--main-transition);
+  color: #545f71;
+  font-size: 16px;
+  font-weight: 300;
+}
+.Multi-Round .Multi-Round-box .Multi-box .input-box img {
+  width: 20px;
+  height: 20px;
+}
+
+.Multi-Round .Multi-Round-box .Multi-box button {
+  position: relative;
+  width: 50%;
+  background-color: #81e200;
+  border: 0;
+  padding: 12px 16px 12px 16px;
+  border-radius: 10px;
+  transition: var(--main-transition);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+@media (max-width: 1200px) {
+  .Multi-Round .Multi-Round-box .Multi-box button {
+    width: 100%;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Multi-Round Multi-Round-box left
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Multi-Round .Multi-Round-box .Multi-left {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.Multi-Round .Multi-Round-box .Multi-left .Image-Multi {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.Multi-Round .Multi-Round-box .Multi-left .Image-Multi > img {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #e6e7e8;
+}
+.Multi-Round .Multi-Round-box .Multi-left .label-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.Multi-Round .Multi-Round-box .Multi-left .label-info span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #545f71;
+}
+.Multi-Round .Multi-Round-box .Multi-left .label-info span img {
+  width: 15px;
+  height: auto;
+}
+.Multi-Round .Multi-Round-box .Multi-left .label-info p {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  color: #545f71;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Multi-Round Multi-Round-box right
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Multi-Round .Multi-Round-box .Multi-right {
+  position: relative;
+  min-width: 400px;
+  width: 400px;
+  max-width: 100%;
+  min-height: 450px;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--main-transition);
+}
+@media (max-width: 1200px) {
+  .Multi-Round .Multi-Round-box .Multi-right {
+    min-width: 300px;
+    width: 300px;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+
+.Multi-Round .Multi-Round-box .Multi-right::after {
+  position: absolute;
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../../../../../../public/CreateTournament/MultiRound.jpeg");
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.Multi-Round .Multi-Round-box .Multi-right:hover::after {
+  transform: rotate(15deg) scale(1.7);
+}
+.Multi-Round .Multi-Round-box .Multi-right::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  left: 0;
+  transition: var(--main-transition);
+}
+.Multi-Round .Multi-Round-box .Multi-right:hover::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.Multi-Round .Multi-Round-box .Multi-right span {
+  position: relative;
+  font-size: 60px;
+  font-weight: 600;
+  color: #e6ecf1;
+  transform: translateX(120%) scale(0.1);
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+@media (max-width: 772px) {
+  .Multi-Round .Multi-Round-box .Multi-right span {
+    font-size: 30px;
+  }
+}
+.Multi-Round .Multi-Round-box .Multi-right:hover span {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}

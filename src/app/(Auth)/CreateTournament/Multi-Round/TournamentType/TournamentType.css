@@ -1,0 +1,49 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# TournamentType
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.TournamentType {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.TournamentType > h1 {
+  margin-left: 10px;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+  # TournamentType NaviGation
+  ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.TournamentType .NaviGation {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: #6d747b;
+  margin-bottom: 10px;
+}
+.TournamentType .NaviGation a.Active {
+  position: relative;
+  font-weight: 600;
+  color: #2f3942;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+  # TournamentType TournamentType-box
+  ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.TournamentType .TournamentType-box {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  box-shadow: 0px 4px 34.4px 0px #0000000f;
+  border-radius: var(--main-border-radius);
+  padding: 30px 0 30px 30px;
+}
+@media (max-width: 1200px) {
+  .TournamentType .TournamentType-box {
+    flex-direction: column-reverse;
+    padding: 30px 30px;
+    align-items: center;
+  }
+}
