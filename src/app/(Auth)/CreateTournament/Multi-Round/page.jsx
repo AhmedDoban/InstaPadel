@@ -22,7 +22,7 @@ function Page() {
           SetPageLoaded={SetPageLoaded}
         />
       )}
-      {PageLoaded === 2 && <TournamentType />}
+      {PageLoaded === 2 && <TournamentType SetPageLoaded={SetPageLoaded} />}
     </AuthWrapper>
   );
 }

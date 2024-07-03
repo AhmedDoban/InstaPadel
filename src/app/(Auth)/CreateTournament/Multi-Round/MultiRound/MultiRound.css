@@ -8,7 +8,7 @@
   gap: 20px;
 }
 .Multi-Round > h1 {
-  margin-left: 10px;
+  margin: 10px 0 10px 10px;
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # Multi-Round NaviGation
@@ -123,10 +123,19 @@
   border: 1px solid #e7e8e9;
   border-radius: 8px;
   padding: 3px 10px;
+  height: 50px;
 }
 .Multi-Round .Multi-Round-box .Multi-box .dropDownSelect-box {
   position: relative;
   width: 100%;
+}
+.Multi-Round .Multi-Round-box .Multi-box label {
+  position: relative;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 23.94px;
+  text-align: left;
+  color: #545f71;
 }
 .Multi-Round .Multi-Round-box .Multi-box .input-box input {
   position: relative;
@@ -149,7 +158,7 @@
   width: 50%;
   background-color: #81e200;
   border: 0;
-  padding: 12px 16px 12px 16px;
+  height: 50px;
   border-radius: 10px;
   transition: var(--main-transition);
   cursor: pointer;
@@ -191,7 +200,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 5px;
 }
 .Multi-Round .Multi-Round-box .Multi-left .label-info span {
   position: relative;
@@ -211,6 +219,7 @@
   font-size: 14px;
   font-weight: 300;
   color: #545f71;
+  margin: 0;
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # Multi-Round Multi-Round-box right
