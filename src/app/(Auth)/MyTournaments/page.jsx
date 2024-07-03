@@ -4,6 +4,7 @@ import MainTitle from "@/Components/MainTitle/MainTitle";
 import Image from "next/image";
 import { useState } from "react";
 import "./MyTournaments.css";
+import Link from "next/link";
 
 function Page() {
   const [Tournaments, SetTournaments] = useState([
@@ -25,7 +26,11 @@ function Page() {
         </MainTitle>
         <div className="MyTournaments-container">
           {Tournaments.map((tour, index) => (
-            <div className="Tournament-Card" key={index}>
+            <Link
+              className="Tournament-Card"
+              key={index}
+              href={`/MyTournaments/${index}`}
+            >
               <div className="Head">
                 <h1>Tournament {index + 1}</h1>
                 <div className="counter">
@@ -37,8 +42,8 @@ function Page() {
                 <div className="box">
                   <Image
                     src="/MyTournaments/level.svg"
-                    width={35}
-                    height={35}
+                    width={30}
+                    height={30}
                     alt="level"
                   />
                   <p>Level A</p>
@@ -46,8 +51,8 @@ function Page() {
                 <div className="box">
                   <Image
                     src="/MyTournaments/location.svg"
-                    width={35}
-                    height={35}
+                    width={30}
+                    height={30}
                     alt="location"
                   />
                   <p>New Cairo</p>
@@ -55,8 +60,8 @@ function Page() {
                 <div className="box">
                   <Image
                     src="/MyTournaments/date.svg"
-                    width={35}
-                    height={35}
+                    width={30}
+                    height={30}
                     alt="level"
                   />
                   <p>2024/2/5</p>
@@ -64,8 +69,8 @@ function Page() {
                 <div className="box">
                   <Image
                     src="/MyTournaments/Ball.svg"
-                    width={35}
-                    height={35}
+                    width={30}
+                    height={30}
                     alt="level"
                   />
                   <p>Multi Round</p>
@@ -74,7 +79,7 @@ function Page() {
               <div className="TourStatus">
                 <span>Public</span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -183,9 +183,9 @@
   background-color: #f2fce6;
   width: fit-content;
   height: fit-content;
-  padding: 7px;
+  padding: 7px 12px;
   color: #81e200;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   border-radius: 94px;
 }
@@ -285,6 +285,7 @@
   flex-wrap: wrap;
   gap: 5px;
   width: 100%;
+  padding-right: 10px;
 }
 .Dashboards .Dashboardsleft .status-container .box .Pie-Chart-box h2 {
   position: relative;
@@ -366,7 +367,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   height: 100%;
 }
 .Dashboards .Dashboardsleft .status-container .Bar-chart .X-ax .X-Data p {
@@ -404,10 +405,11 @@
 }
 .Dashboards .Dashboardsleft .status-container .Bar-chart .X-ax .X-Data span {
   position: relative;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
   color: #1c1c1c60;
   width: 53px;
+  padding-bottom: 10px;
   text-align: center;
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ

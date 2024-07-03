@@ -1,0 +1,238 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Create Tournament
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.CreateTournament {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 772px) {
+  .CreateTournament {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Create Tournament right
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.CreateTournament .rightStatus {
+  position: relative;
+  min-width: 400px;
+  width: 400px;
+  max-width: 100%;
+  height: calc(100vh - 130px);
+  min-height: 450px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--main-transition);
+}
+
+.CreateTournament .rightStatus::after {
+  position: absolute;
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease-in-out;
+}
+.CreateTournament .rightStatus.Public::after {
+  background-image: url("../../../../public/CreateTournament/CreateTournamentStatus2.png");
+}
+.CreateTournament .rightStatus.Private::after {
+  background-image: url("../../../../public/CreateTournament/CreateTournamentStatus.jpeg");
+}
+.CreateTournament .rightStatus:hover::after {
+  transform: rotate(15deg) scale(1.7);
+}
+.CreateTournament .rightStatus::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  left: 0;
+  transition: var(--main-transition);
+}
+.CreateTournament .rightStatus:hover::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.CreateTournament .rightStatus span {
+  position: relative;
+  font-size: 70px;
+  font-weight: 600;
+  color: #e6ecf1;
+  transform: translateX(120%) scale(0.1);
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.CreateTournament .rightStatus:hover span {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Create Tournament left
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.CreateTournament .leftContent {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Create Tournament left head
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.CreateTournament .leftContent .Create-Head {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.CreateTournament .leftContent .Create-Head .input-toggle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 15px;
+}
+.CreateTournament .leftContent .Create-Head .input-toggle p {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b90b0;
+}
+.CreateTournament .leftContent .Create-Head .input-toggle label {
+  position: relative;
+  width: 40px;
+  height: 25px;
+  background-color: #d8dae5;
+  display: flex;
+  border-radius: 120px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.CreateTournament .leftContent .Create-Head .input-toggle label::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  top: 50%;
+  right: 17.5px;
+  transform: translateY(-50%);
+  transition: var(--main-transition);
+}
+.CreateTournament
+  .leftContent
+  .Create-Head
+  .input-toggle
+  input:checked
+  + label::before {
+  right: 2.5px;
+}
+.CreateTournament
+  .leftContent
+  .Create-Head
+  .input-toggle
+  input:checked
+  + label {
+  background-color: #2b608e;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Create Tournament left body
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.CreateTournament .leftContent .Create-box {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+.CreateTournament .leftContent .Create-box .box {
+  position: relative;
+  padding: 35px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 4px 34.4px 0px #0000000f;
+  height: 250px;
+  overflow: hidden;
+  border: 2px solid #fff;
+  transition: var(--main-transition);
+}
+.CreateTournament .leftContent .Create-box .box:hover {
+  padding: 20px;
+  border: 2px solid #cbf396;
+}
+.CreateTournament .leftContent .Create-box .box h2 {
+  position: relative;
+  font-size: 35px;
+  font-weight: 600;
+  color: #004077;
+  transition: var(--main-transition);
+}
+.CreateTournament .leftContent .Create-box .box:hover h2 {
+  text-shadow: 0px 4px 15px #6b90b057;
+}
+.CreateTournament .leftContent .Create-box .box p {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: left;
+  color: #2b608e;
+}
+.CreateTournament .leftContent .Create-box .box .Cre-Tour-OverLay1 {
+  position: absolute;
+  right: -100px;
+  bottom: -100px;
+  scale: 1.5;
+  transition: var(--main-transition);
+}
+.CreateTournament .leftContent .Create-box .box:hover .Cre-Tour-OverLay1 {
+  scale: 0.8;
+  right: 0px;
+  bottom: -20px;
+}
+
+.CreateTournament .leftContent .Create-box .box .Cre-Tour-OverLay2 {
+  position: absolute;
+  right: -75px;
+  bottom: -35px;
+  transition: var(--main-transition);
+}
+.CreateTournament .leftContent .Create-box .box:hover .Cre-Tour-OverLay2 {
+  right: 30px;
+  bottom: -10px;
+}
+@media (max-width: 772px) {
+  .CreateTournament .leftContent .Create-box .box img {
+    width: 150x;
+    height: 150px;
+  }
+  .CreateTournament .leftContent .Create-box .box:hover .Cre-Tour-OverLay1 {
+    right: -20px;
+    bottom: -10px;
+  }
+  .CreateTournament .leftContent .Create-box .box:hover .Cre-Tour-OverLay2 {
+    right: 0px;
+    bottom: 10px;
+  }
+}
