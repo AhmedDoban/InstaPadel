@@ -1,0 +1,388 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# ContactUs
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.ContactUs {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.ContactUs .head-contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.ContactUs .head-contact p {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: #2f3942;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# contact-Body
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.ContactUs .contact-Body {
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  box-shadow: 0px 4px 34.4px 0px #0000000f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media (max-width: 992px) {
+  .ContactUs .contact-Body {
+    flex-direction: column;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# contact-Body left
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.ContactUs .contact-Body .left {
+  position: relative;
+  background-color: #96b1c7;
+  padding: 25px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  min-height: 500px;
+}
+@media (max-width: 992px) {
+  .ContactUs .contact-Body .left {
+    width: 100%;
+  }
+}
+.ContactUs .contact-Body .left::before {
+  position: absolute;
+  content: "";
+  width: 366px;
+  height: 350px;
+  max-width: 100%;
+  bottom: -0;
+  left: -20px;
+  background-image: url("../../../../public/Contact/Overlay.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  z-index: 1;
+}
+.ContactUs .contact-Body .left .over-Lay-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.ContactUs .contact-Body .left .over-Lay-image::before {
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+  top: -100px;
+  right: -100px;
+  background-color: #2b608e;
+  transform: scale(1.6);
+  border-radius: 50%;
+}
+.ContactUs .contact-Body .left .over-Lay-image::after {
+  position: absolute;
+  content: "";
+  width: 350px;
+  height: 250px;
+  max-width: 100%;
+  bottom: -00px;
+  left: -0px;
+  background-image: url("../../../../public/Contact/Overlay2.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom left;
+  z-index: 1;
+}
+.ContactUs .contact-Body .left .top {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 2;
+}
+.ContactUs .contact-Body .left .top .info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.ContactUs .contact-Body .left .top .info h2 {
+  position: relative;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: left;
+  color: #ffffff;
+}
+.ContactUs .contact-Body .left .top .info span {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: left;
+  color: #e7e8e9;
+}
+.ContactUs .contact-Body .contact-information {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ContactUs .contact-Body .contact-information .contact-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact-information .contact-box .image-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b608e;
+  border-radius: 50%;
+  width: 35px;
+  min-width: 35px;
+  height: 35px;
+  padding: 8px;
+}
+.contact-information .contact-box .image-box img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.contact-information .contact-box span {
+  position: relative;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.4;
+  text-align: left;
+  color: #ffffff;
+  width: 70%;
+}
+.ContactUs .contact-Body .left .bottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 2;
+}
+.ContactUs .contact-Body .left .bottom h4 {
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21.33px;
+  text-align: left;
+  color: #ffffff;
+}
+.ContactUs .contact-Body .left .bottom .social {
+  position: relative;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.ContactUs .contact-Body .left .bottom .social i {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b608e;
+  border-radius: 50%;
+  width: 25px;
+  min-width: 25px;
+  height: 25px;
+  color: #fff;
+  font-size: 10px;
+  cursor: pointer;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# contact-Body right
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.ContactUs .contact-Body .right {
+  position: relative;
+  padding: 20px 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  transition: var(--main-transition);
+}
+@media (max-width: 992px) {
+  .ContactUs .contact-Body .right {
+    padding: 20px;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# contact-Body right box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.ContactUs .contact-Body .right .box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.ContactUs .contact-Body .right .box > label {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: left;
+  color: #545f71;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# contact-Body right box.Subject
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.ContactUs .contact-Body .right .box.Subject {
+  gap: 10px;
+  padding: 20px 0;
+}
+.ContactUs .contact-Body .right .box.Subject label {
+  color: #0e1d25;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# contact-Body right input-box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.ContactUs .contact-Body .right .box > .input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  border: 1px solid #e7e8e9;
+  padding: 10px;
+  border-radius: 8px;
+  height: 50px;
+}
+.ContactUs .contact-Body .right .box > .input-box img {
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+.ContactUs .contact-Body .right .box > .input-box input {
+  position: relative;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  color: #545f71;
+  font-weight: 300;
+  font-size: 16px;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# contact-Body right BoxFlex
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.ContactUs .contact-Body .right .box-flex {
+  position: relative;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+@media (max-width: 992px) {
+  .ContactUs .contact-Body .right .box-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.ContactUs .contact-Body .Subjects-box {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# contact-Body right Subject-Select-box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.ContactUs .contact-Body .Subject-Select-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: fit-content;
+}
+
+.ContactUs .contact-Body .Subject-Select-box label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  color: #37434a;
+  font-weight: 300;
+  font-size: 16px;
+  cursor: pointer;
+}
+.ContactUs .contact-Body .Subject-Select-box label::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  left: 0;
+  border: 1px solid #e7e8e9;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  transition: var(--main-transition);
+}
+.ContactUs .contact-Body .Subject-Select-box label:after {
+  position: absolute;
+  content: "\f00c";
+  font-family: "font Awesome 5 free";
+  font-weight: 900;
+  width: 17px;
+  height: 17px;
+  left: 0;
+  background-color: #81e200;
+  color: #e7e8e9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  transition: var(--main-transition);
+  scale: 0;
+}
+.ContactUs .contact-Body .Subject-Select-box input:checked + label:after {
+  scale: 1;
+  animation: rotate 0.5s ease-in-out alternate-reverse;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# contact-Body right box-acion
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.ContactUs .contact-Body .right .box-acion button {
+  position: relative;
+  width: 50%;
+  background-color: #81e200;
+  border: 0;
+  height: 50px;
+  border-radius: 10px;
+  transition: var(--main-transition);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 20px;
+}
+@media (max-width: 1200px) {
+  .ContactUs .contact-Body .right .box-acion button {
+    width: 100%;
+  }
+}
