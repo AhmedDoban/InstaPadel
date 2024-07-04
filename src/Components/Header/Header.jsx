@@ -3,10 +3,17 @@ import Image from "next/image";
 import "./Header.css";
 import Link from "next/link";
 import { useState } from "react";
+import { LogOutUSer } from "@/Toolkit/Slices/UserSlice";
+import { useDispatch } from "react-redux";
 
 function Header() {
+  const Dispatch = useDispatch();
   const [Notification, SetNotification] = useState(false);
   const [UserMenu, SetUserMenu] = useState(false);
+
+  const logOut = () => {
+    Dispatch(LogOutUSer());
+  };
 
   return (
     <div className="Header">
@@ -102,7 +109,7 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="ChangePassword">
+                <Link href="/FAQ">
                   <Image
                     src="/Icon/FAQ.svg"
                     alt="look"
@@ -113,7 +120,7 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="ChangePassword">
+                <Link href="/" onClick={() => logOut()}>
                   <Image
                     src="/Icon/LogOut.svg"
                     alt="look"

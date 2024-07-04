@@ -20,6 +20,10 @@ const UserSlice = createSlice({
         State.IsLogin = false;
       }
     },
+    LogOutUSer: (State, Action) => {
+      localStorage.clear();
+      State.IsLogin = false;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(UserLogin.fulfilled, (State, Action) => {
@@ -28,5 +32,5 @@ const UserSlice = createSlice({
   },
 });
 
-export const { CheckLoginLocal } = UserSlice.actions;
+export const { CheckLoginLocal, LogOutUSer } = UserSlice.actions;
 export default UserSlice.reducer;
