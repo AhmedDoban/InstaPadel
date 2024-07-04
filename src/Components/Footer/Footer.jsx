@@ -13,7 +13,7 @@ function Footer() {
         <div className="contact">
           <Link href="/">My profile</Link>
           <Link href="/">Contact Us</Link>
-          <Link href="/">FAQ</Link>
+          <Link href="/FAQ">FAQ</Link>
         </div>
         <div className="social">
           <Link href="/">

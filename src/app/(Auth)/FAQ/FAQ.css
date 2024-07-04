@@ -1,0 +1,93 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# FAQ
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.FAQ {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.FAQ .head-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.FAQ .head-box span {
+  position: relative;
+  color: #737c81;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+}
+.FAQ .head-box p {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: #2f3942;
+}
+
+.FAQ .head-box .input-Search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0px 0.74px 1.47px 0px #1018280d;
+  background-color: #f7f9fb;
+  border-radius: 10px;
+  width: 350px;
+  max-width: 100%;
+  padding: 10px 15px;
+}
+.FAQ .head-box .input-Search input {
+  position: relative;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  color: #53686a;
+  font-weight: 400;
+  font-size: 14px;
+}
+.FAQ .head-box .input-Search img {
+  width: 20px;
+  height: 20px;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# FAQ rarlyQuestions
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.FAQ .rarlyQuestions {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  box-shadow: 0px 4px 34.4px 0px #0000000f;
+  padding: 50px;
+  border-radius: 10px;
+}
+.FAQ .rarlyQuestions .box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.FAQ .rarlyQuestions .box h2 {
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  color: #2f3942;
+}
+.FAQ .rarlyQuestions .box span {
+  position: relative;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 23.94px;
+  text-align: left;
+  color: #6d747b;
+}
