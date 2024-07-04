@@ -12,7 +12,7 @@ function FAQ() {
           <MainTitle FontSize="40px" Weight={600} Color="#004077">
             Ask us anything
           </MainTitle>
-          <p>Have any questions? We're here to assist you.</p>
+          <p>Have any questions? We &lsquo; re here to assist you.</p>
           <div className="input-Search">
             <input
               type="search"
