@@ -1,0 +1,307 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Edit_Profile
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Edit_Profile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: calc(100vh - 140px);
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Edit_Profile NaviGation
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Edit_Profile .NaviGation {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: #6d747b;
+  margin-bottom: 10px;
+}
+.Edit_Profile .NaviGation a.Active {
+  position: relative;
+  font-weight: 600;
+  color: #2f3942;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Edit_Profile Edit_Profile-box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Edit_Profile .Edit_Profile-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0px 4px 34.4px 0px #0000000f;
+  border-radius: var(--main-border-radius);
+  padding: 30px 0 30px 30px;
+  height: 100%;
+  transition: var(--main-transition);
+}
+@media (max-width: 1200px) {
+  .Edit_Profile .Edit_Profile-box {
+    padding: 30px;
+    gap: 2px;
+  }
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Edit_Profile Edit_Profile-box head
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Edit_Profile .Edit_Profile-box .Edit_Profile-head {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-bottom: 1px solid #e7e8e9;
+  padding: 0 0 20px 0;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+ # Edit_Profile Edit_Profile-box Edit_Profile-body
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Edit_Profile .Edit_Profile-box .Edit_Profile-body {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 1200px) {
+  .Edit_Profile .Edit_Profile-box .Edit_Profile-body {
+    flex-direction: column-reverse;
+  }
+}
+.Edit_Profile .Edit_Profile-box .Edit_Profile-body .GeneralInfo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media (max-width: 1200px) {
+  .Edit_Profile .Edit_Profile-box .Edit_Profile-body .GeneralInfo {
+    width: 100%;
+  }
+}
+.Edit_Profile .Edit_Profile-box .Edit_Profile-body .box-Input,
+.Edit_Profile .Edit_Profile-box .Edit_Profile-body .box-gender {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Edit_Profile .Edit_Profile-box .Edit_Profile-body .box-gender .input-gender {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.Edit_Profile .Edit_Profile-box .Edit_Profile-body .box-Input label,
+.Edit_Profile .Edit_Profile-box .Edit_Profile-body .box-gender label {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  color: #545f71;
+}
+.Edit_Profile .Edit_Profile-body .box-gender .input-gender label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-left: 20px;
+  color: #545f71;
+  font-weight: 300;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.Edit_Profile .Edit_Profile-body .box-gender .input-gender label::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  left: 0;
+  border: 1px solid #e7e8e9;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  transition: var(--main-transition);
+}
+.Edit_Profile .Edit_Profile-body .box-gender .input-gender label:after {
+  position: absolute;
+  content: "\f00c";
+  font-family: "font Awesome 5 free";
+  font-weight: 900;
+  width: 17px;
+  height: 17px;
+  left: 0;
+  background-color: #81e200;
+  color: #e7e8e9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  transition: var(--main-transition);
+  scale: 0;
+}
+.Edit_Profile .box-gender .input-gender input:checked + label:after {
+  scale: 1;
+  animation: rotate 0.5s ease-in-out alternate-reverse;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.Edit_Profile .Edit_Profile-box .Edit_Profile-body .input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #e7e8e9;
+  border-radius: 8px;
+  width: 400px;
+}
+@media (max-width: 1200px) {
+  .Edit_Profile .Edit_Profile-box .Edit_Profile-body .input-container {
+    width: 100%;
+  }
+}
+.Edit_Profile .Edit_Profile-box .Edit_Profile-body .input-container input {
+  position: relative;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: left;
+  color: #545f71;
+}
+.Edit_Profile
+  .Edit_Profile-box
+  .Edit_Profile-body
+  .input-container
+  input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url("../../../../../public/CreateTournament/Date.svg") no-repeat;
+  width: 15px;
+  height: 15px;
+  border-width: thin;
+  background-size: contain;
+  cursor: pointer;
+}
+.Edit_Profile .Edit_Profile-box .Edit_Profile-body .input-container img {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.Edit_Profile .Edit_Profile-box .Edit_Profile-body .action button {
+  position: relative;
+  width: 300px;
+  background-color: #81e200;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+@media (max-width: 1200px) {
+  .Edit_Profile .Edit_Profile-box .Edit_Profile-body .action button {
+    width: 100%;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+ # Edit_Profile user-avatar-edit
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Edit_Profile .user-avatar-edit {
+  position: relative;
+  width: 350px;
+  height: 400px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .Edit_Profile .user-avatar-edit {
+    width: 100%;
+    height: 150px;
+    justify-content: center;
+  }
+}
+.Edit_Profile .user-avatar-edit::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background-image: url("../../../../../public/MyProfile/EditProfileBack.svg");
+  width: 80%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+@media (max-width: 1200px) {
+  .Edit_Profile .user-avatar-edit::before {
+    background-image: url("../../../../../public/MyProfile/EditProfileBack-mob.svg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    left: 0;
+    top: 0;
+  }
+}
+.Edit_Profile .user-avatar-edit .img-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+@media (max-width: 1200px) {
+  .Edit_Profile .user-avatar-edit .img-container {
+    width: 100px;
+    height: 100px;
+  }
+}
+.Edit_Profile .user-avatar-edit .img-container img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.Edit_Profile .user-avatar-edit .img-container label {
+  position: absolute;
+  bottom: -50px;
+  z-index: 3;
+  right: 50px;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+}
+@media (max-width: 1200px) {
+  .Edit_Profile .user-avatar-edit .img-container label {
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    right: 10px;
+  }
+}

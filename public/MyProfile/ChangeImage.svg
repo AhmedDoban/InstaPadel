@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1080" height="1080" viewBox="0 0 1080 1080" xml:space="preserve">
+<desc>Created with Fabric.js 5.2.4</desc>
+<defs>
+</defs>
+<g transform="matrix(1 0 0 1 540 540)" id="1d78a48f-be10-47b7-bf42-703881c19905"  >
+<rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1; visibility: hidden;" vector-effect="non-scaling-stroke"  x="-540" y="-540" rx="0" ry="0" width="1080" height="1080" />
+</g>
+<g transform="matrix(1 0 0 1 540 540)" id="931b0bd0-e296-4fbc-9b7d-216e1d1a2d0c"  >
+</g>
+<g transform="matrix(46.65 0 0 46.65 540.53 538.18)"  >
+<g style="" vector-effect="non-scaling-stroke"   >
+		<g transform="matrix(0.4 0 0 0.4 0 0)"  >
+<rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  x="-27" y="-27" rx="27" ry="27" width="54" height="54" />
+</g>
+		<g transform="matrix(0.4 0 0 0.4 -0.06 0.07)"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,64,119); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(-61.85, -58.08)" d="M 57 62.9 C 57.2 62.9 57.2 62.9 57.3 62.9 L 60.1 62.4 C 60.3 62.3 60.6 62.2 60.9 62 L 67.4 55.8 C 68.5 54.8 68.5 53.2 67.4 52.2 L 66.9 51.7 C 65.9 50.7 64.1 50.7 63.1 51.7 L 56.5 57.9 C 56.3 58.1 56.2 58.4 56.1 58.6 L 55.5 61.2 C 55.4 61.7 55.6 62.2 56 62.5 C 56.2 62.8 56.7 62.9 57 62.9 Z M 57.5 58.9 L 64.1 52.7 C 64.6 52.3 65.4 52.3 65.8 52.7 L 66.4 53.2 C 66.9 53.7 66.9 54.4 66.4 54.9 L 59.8 61.1 L 57 61.5 L 57.5 58.9 Z M 67.4 63.8 L 56.2 63.8 C 55.8 63.8 55.5 64.1 55.5 64.5 C 55.5 64.9 55.9 65.2 56.2 65.2 L 67.3 65.2 C 67.8 65.2 68.1 64.9 68.1 64.5 C 68.1 64.1 67.7 63.8 67.4 63.8 Z" stroke-linecap="round" />
+</g>
+</g>
+</g>
+</svg>

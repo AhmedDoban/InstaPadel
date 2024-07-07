@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
 }
 
 .FAQ .head-box {
@@ -20,7 +20,7 @@
 .FAQ .head-box span {
   position: relative;
   color: #737c81;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   text-align: center;
 }
@@ -74,7 +74,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 .FAQ .rarlyQuestions .box h2 {
   position: relative;
