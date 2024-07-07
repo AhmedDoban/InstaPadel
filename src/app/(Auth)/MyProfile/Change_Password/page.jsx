@@ -48,7 +48,7 @@ function Page() {
                 </div>
               </div>
               <div className="box-Input">
-                <label htmlFor="CurrentPassword">Current password</label>
+                <label htmlFor="NewPassword">New password</label>
                 <div className="input-container">
                   <Image
                     src="/MyProfile/lock-closed.svg"
@@ -58,9 +58,9 @@ function Page() {
                   />
                   <input
                     type="password"
-                    name="CurrentPassword"
-                    id="CurrentPassword"
-                    placeholder="Enter your Current password"
+                    name="NewPassword"
+                    id="NewPassword"
+                    placeholder="Enter your new password"
                   />
                   <Image
                     src="/MyProfile/eye.svg"
@@ -71,7 +71,7 @@ function Page() {
                 </div>
               </div>
               <div className="box-Input">
-                <label htmlFor="CurrentPassword">Current password</label>
+                <label htmlFor="ConfirmPassword">Confirm password</label>
                 <div className="input-container">
                   <Image
                     src="/MyProfile/lock-closed.svg"
@@ -81,9 +81,9 @@ function Page() {
                   />
                   <input
                     type="password"
-                    name="CurrentPassword"
-                    id="CurrentPassword"
-                    placeholder="Enter your Current password"
+                    name="ConfirmPassword"
+                    id="ConfirmPassword"
+                    placeholder="Confirm your password"
                   />
                   <Image
                     src="/MyProfile/eye.svg"

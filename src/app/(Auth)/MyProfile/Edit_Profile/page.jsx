@@ -72,24 +72,14 @@ function Page() {
                   <div className="Gender-Select-box">
                     <input type="radio" name="Gender" id="Female" hidden />
                     <label htmlFor="Female">
-                      <Image
-                        src="/MyProfile/GenderFemale.svg"
-                        width={20}
-                        height={20}
-                        alt="Male"
-                      />
+                      <i className="fa-solid fa-venus"></i>
                       Female
                     </label>
                   </div>
                   <div className="Gender-Select-box">
                     <input type="radio" name="Gender" id="Male" hidden />
                     <label htmlFor="Male">
-                      <Image
-                        src="/MyProfile/GenderMale.svg"
-                        width={18}
-                        height={18}
-                        alt="Male"
-                      />
+                      <i className="fa-solid fa-mars"></i>
                       Male
                     </label>
                   </div>

@@ -154,7 +154,12 @@
   scale: 1;
   animation: rotate 0.5s ease-in-out alternate-reverse;
 }
-
+.Edit_Profile .box-gender .input-gender label i {
+  transition: var(--main-transition);
+}
+.Edit_Profile .box-gender .input-gender input:checked + label i {
+  color: #81e200;
+}
 @keyframes rotate {
   to {
     transform: rotate(-360deg);
