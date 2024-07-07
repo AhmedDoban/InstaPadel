@@ -11,7 +11,7 @@ function Footer() {
           <h1>Instapadel</h1>
         </div>
         <div className="contact">
-          <Link href="/">My profile</Link>
+          <Link href="/MyProfile">My profile</Link>
           <Link href="/">Contact Us</Link>
           <Link href="/FAQ">FAQ</Link>
         </div>
