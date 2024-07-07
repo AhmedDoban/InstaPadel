@@ -35,7 +35,7 @@
   content: "";
   width: 150px;
   height: 150px;
-  background-image: url("../../../../public/MyTournaments/BallOver.svg");
+  background-image: url("../../../../../public/MyTournaments/BallOver.svg");
   background-size: cover;
   bottom: 0;
   right: 20px;
