@@ -1,7 +1,7 @@
 "use client";
 import AuthWrapper from "@/Components/AuthWrapper/AuthWrapper";
 import { useState } from "react";
-import Leaderboard from "./Leaderboard/Leaderboard";
+import Leaderboard from "./leaderboard/Leaderboard";
 import Matches from "./Matches/Matches";
 import DrawSystem from "./DrawSystem/DrawSystem";
 
