@@ -1,0 +1,23 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Matches
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Matches {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Matches
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Matches .Matchs-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+}
+@media (max-width: 992px) {
+  .Matches .Matchs-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
