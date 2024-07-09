@@ -6,6 +6,7 @@ import "./Matches.css";
 import UserModel from "./MatchesBox/UserModel/UserModel";
 import SummaryModel from "./MatchesBox/SummaryModel/SummaryModel";
 import ResultSummary from "./MatchesBox/ResultSummary/ResultSummary";
+import TimeModel from "./MatchesBox/TimeModel/TimeModel";
 
 function Matches({ ShwonPage, SetShownPage }) {
   const [LoadedMatches, SetLoadedMatches] = useState([{}, {}, {}, {}]);
@@ -13,6 +14,7 @@ function Matches({ ShwonPage, SetShownPage }) {
   const [UserDetailsModel, SetUserDetailsModel] = useState(false);
   const [SummaryDetailsModel, SetSummaryDetailsModel] = useState(false);
   const [SummaryResultModel, SetSummaryResultModel] = useState(false);
+  const [TimerModel, SetTimerModel] = useState(false);
 
   return (
     <div className="Matches">
@@ -26,6 +28,7 @@ function Matches({ ShwonPage, SetShownPage }) {
             SetUserDetails={SetUserDetails}
             SetUserDetailsModel={SetUserDetailsModel}
             SetSummaryDetailsModel={SetSummaryDetailsModel}
+            SetTimerModel={SetTimerModel}
           />
         ))}
       </div>
@@ -45,6 +48,7 @@ function Matches({ ShwonPage, SetShownPage }) {
       {SummaryResultModel && (
         <ResultSummary SetSummaryResultModel={SetSummaryResultModel} />
       )}
+      {TimerModel && <TimeModel SetTimerModel={SetTimerModel} />}
     </div>
   );
 }

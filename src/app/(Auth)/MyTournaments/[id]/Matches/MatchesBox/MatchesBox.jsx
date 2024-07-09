@@ -7,6 +7,7 @@ function MatchesBox({
   SetUserDetails,
   SetUserDetailsModel,
   SetSummaryDetailsModel,
+  SetTimerModel,
 }) {
   const [DetailsOpen, SetDetailsOpen] = useState(false);
 
@@ -19,7 +20,7 @@ function MatchesBox({
       <div className="General-Info">
         <h3>Group 2</h3>
         <div className="actions">
-          <div className="time">
+          <div className="time" onClick={() => SetTimerModel(true)}>
             <span>12:14</span>
             <Image src="/Matches/Time.svg" width={30} height={30} alt="Time" />
           </div>
