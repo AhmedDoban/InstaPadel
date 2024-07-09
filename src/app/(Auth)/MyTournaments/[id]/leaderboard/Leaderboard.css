@@ -30,6 +30,13 @@
   display: flex;
   gap: 10px;
 }
+@media (max-width: 1200px) {
+  .Leaderboard .waiting-list {
+    min-height: 570px;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # waiting-list left
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
@@ -39,6 +46,15 @@
   height: 100%;
   right: 0;
   bottom: 0;
+}
+@media (max-width: 1200px) {
+  .Leaderboard .waiting-list .right {
+    height: 300px;
+    width: 100%;
+    right: 0;
+    top: 0;
+    bottom: auto;
+  }
 }
 .Leaderboard .waiting-list .right::before {
   position: absolute;
@@ -54,6 +70,7 @@
   top: 0;
   left: 0;
 }
+
 .Leaderboard .waiting-list .right::after {
   position: absolute;
   content: "";
@@ -68,6 +85,18 @@
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 }
+
+@media (max-width: 1200px) {
+  .Leaderboard .waiting-list .right::before {
+    transform-origin: bottom right;
+    transform: rotate(5deg) scale(1.5);
+  }
+  .Leaderboard .waiting-list .right::after {
+    transform-origin: bottom right;
+    transform: rotate(5deg) scale(1.6) translateY(0px) translateX(15px);
+    border-bottom: 5px solid #cbf396;
+  }
+}
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # waiting-list right
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
@@ -78,6 +107,12 @@
   gap: 15px;
   padding: 30px;
   width: 51%;
+  transition: var(--main-transition);
+}
+@media (max-width: 1200px) {
+  .Leaderboard .waiting-list .left {
+    width: 100%;
+  }
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # waiting-list right head
@@ -87,6 +122,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
 }
 .Leaderboard .waiting-list .left .head-waiting h1 {
@@ -94,6 +130,11 @@
   font-size: 30px;
   font-weight: 600;
   color: #004077;
+}
+@media (max-width: 1200px) {
+  .Leaderboard .waiting-list .left .head-waiting h1 {
+    font-size: 24px;
+  }
 }
 .Leaderboard .waiting-list .left .head-waiting ul {
   position: relative;
@@ -103,8 +144,8 @@
   gap: 50px;
 }
 @media (max-width: 992px) {
-  .My-Tournaments-Head-action {
-    gap: 20px;
+  .Leaderboard .waiting-list .left .head-waiting ul {
+    gap: 10px;
   }
 }
 .Leaderboard .waiting-list .left .head-waiting li {
@@ -189,6 +230,13 @@
   align-items: center;
   gap: 10px;
 }
+@media (max-width: 992px) {
+  .Leaderboard .waiting-list .left .waiting-body .user-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .Leaderboard .waiting-list .left .waiting-body .user-box .info {
   position: relative;
   display: flex;
