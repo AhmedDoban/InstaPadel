@@ -1,0 +1,142 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# SummaryModelPopup
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.SummaryModelPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  background: #00000033;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# SummaryModelPopup Summary-details-box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.SummaryModelPopup .Summary-details-box {
+  position: relative;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 200px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  animation: fading 0.5s ease-in-out;
+}
+@keyframes fading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.SummaryModelPopup .Summary-details-box > h1 {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  color: #004077;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# SummaryModelPopup Summary-details-box competition
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.SummaryModelPopup .Summary-details-box .competition-box {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.SummaryModelPopup .Summary-details-box .competition-box .user-box {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.SummaryModelPopup .Summary-details-box .competition-box .user-box span {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  color: #737c81;
+}
+.SummaryModelPopup .Summary-details-box .competition-box .user-box img {
+  position: relative;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.SummaryModelPopup .Summary-details-box .competition-box .user-box h4 {
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  color: #004077;
+  cursor: pointer;
+}
+.SummaryModelPopup .Summary-details-box .competition-box .vs {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SummaryModelPopup .Summary-details-box .competition-box .vs img {
+  height: 100%;
+  width: 100%;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# SummaryModelPopup Summary-details-box Sets
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.SummaryModelPopup .Summary-details-box .sets-box {
+  position: relative;
+  display: flex;
+  gap: 50px;
+}
+.SummaryModelPopup .Summary-details-box .sets-box .sets-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+.SummaryModelPopup .Summary-details-box .sets-box .sets-input label {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  color: #545f71;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# SummaryModelPopup Summary-details-box Sets
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.SummaryModelPopup .Summary-details-box .sets-action-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.SummaryModelPopup .Summary-details-box .sets-action-box button {
+  position: relative;
+  width: 100%;
+  padding: 13px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  transition: var(--main-transition);
+}
+.SummaryModelPopup .Summary-details-box .sets-action-box button.Clear {
+  background-color: #f2fce6;
+  color: #2f3942;
+}
+.SummaryModelPopup .Summary-details-box .sets-action-box button.Apply {
+  background-color: #81e200;
+  color: #ffffff;
+}

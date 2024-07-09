@@ -3,7 +3,11 @@ import Image from "next/image";
 import "./MatchesBox.css";
 import { useState } from "react";
 
-function MatchesBox() {
+function MatchesBox({
+  SetUserDetails,
+  SetUserDetailsModel,
+  SetSummaryDetailsModel,
+}) {
   const [DetailsOpen, SetDetailsOpen] = useState(false);
 
   return (
@@ -19,7 +23,7 @@ function MatchesBox() {
             <span>12:14</span>
             <Image src="/Matches/Time.svg" width={30} height={30} alt="Time" />
           </div>
-          <div className="summary">
+          <div className="summary" onClick={() => SetSummaryDetailsModel(true)}>
             <Image
               src="/Matches/Summary.svg"
               width={30}
@@ -51,12 +55,12 @@ function MatchesBox() {
             <div className="user-box">
               <span>T4</span>
               <Image src="/User/User1.jpeg" width={30} height={30} alt="User" />
-              <h4>Ali Ahmad</h4>
+              <h4 onClick={() => SetUserDetailsModel(true)}>Ali Ahmad</h4>
             </div>
             <div className="user-box">
               <span>T4</span>
               <Image src="/User/User1.jpeg" width={30} height={30} alt="User" />
-              <h4>Ali Ahmad</h4>
+              <h4 onClick={() => SetUserDetailsModel(true)}>Ali Ahmad</h4>
             </div>
           </div>
           <div className="vs">
@@ -66,12 +70,12 @@ function MatchesBox() {
             <div className="user-box">
               <span>T4</span>
               <Image src="/User/User1.jpeg" width={30} height={30} alt="User" />
-              <h4>Ali Ahmad</h4>
+              <h4 onClick={() => SetUserDetailsModel(true)}>Ali Ahmad</h4>
             </div>
             <div className="user-box">
               <span>T4</span>
               <Image src="/User/User1.jpeg" width={30} height={30} alt="User" />
-              <h4>Ali Ahmad</h4>
+              <h4 onClick={() => SetUserDetailsModel(true)}>Ali Ahmad</h4>
             </div>
           </div>
         </div>
@@ -80,12 +84,12 @@ function MatchesBox() {
             <div className="user-box">
               <span>T4</span>
               <Image src="/User/User1.jpeg" width={30} height={30} alt="User" />
-              <h4>Ali Ahmad</h4>
+              <h4 onClick={() => SetUserDetailsModel(true)}>Ali Ahmad</h4>
             </div>
             <div className="user-box">
               <span>T4</span>
               <Image src="/User/User1.jpeg" width={30} height={30} alt="User" />
-              <h4>Ali Ahmad</h4>
+              <h4 onClick={() => SetUserDetailsModel(true)}>Ali Ahmad</h4>
             </div>
           </div>
           <div className="vs">
@@ -95,12 +99,12 @@ function MatchesBox() {
             <div className="user-box">
               <span>T4</span>
               <Image src="/User/User1.jpeg" width={30} height={30} alt="User" />
-              <h4>Ali Ahmad</h4>
+              <h4 onClick={() => SetUserDetailsModel(true)}>Ali Ahmad</h4>
             </div>
             <div className="user-box">
               <span>T4</span>
               <Image src="/User/User1.jpeg" width={30} height={30} alt="User" />
-              <h4>Ali Ahmad</h4>
+              <h4 onClick={() => SetUserDetailsModel(true)}>Ali Ahmad</h4>
             </div>
           </div>
         </div>
@@ -109,12 +113,12 @@ function MatchesBox() {
             <div className="user-box">
               <span>T4</span>
               <Image src="/User/User1.jpeg" width={30} height={30} alt="User" />
-              <h4>Ali Ahmad</h4>
+              <h4 onClick={() => SetUserDetailsModel(true)}>Ali Ahmad</h4>
             </div>
             <div className="user-box">
               <span>T4</span>
               <Image src="/User/User1.jpeg" width={30} height={30} alt="User" />
-              <h4>Ali Ahmad</h4>
+              <h4 onClick={() => SetUserDetailsModel(true)}>Ali Ahmad</h4>
             </div>
           </div>
           <div className="vs">
@@ -124,12 +128,12 @@ function MatchesBox() {
             <div className="user-box">
               <span>T4</span>
               <Image src="/User/User1.jpeg" width={30} height={30} alt="User" />
-              <h4>Ali Ahmad</h4>
+              <h4 onClick={() => SetUserDetailsModel(true)}>Ali Ahmad</h4>
             </div>
             <div className="user-box">
               <span>T4</span>
               <Image src="/User/User1.jpeg" width={30} height={30} alt="User" />
-              <h4>Ali Ahmad</h4>
+              <h4 onClick={() => SetUserDetailsModel(true)}>Ali Ahmad</h4>
             </div>
           </div>
         </div>
@@ -138,12 +142,12 @@ function MatchesBox() {
             <div className="user-box">
               <span>T4</span>
               <Image src="/User/User1.jpeg" width={30} height={30} alt="User" />
-              <h4>Ali Ahmad</h4>
+              <h4 onClick={() => SetUserDetailsModel(true)}>Ali Ahmad</h4>
             </div>
             <div className="user-box">
               <span>T4</span>
               <Image src="/User/User1.jpeg" width={30} height={30} alt="User" />
-              <h4>Ali Ahmad</h4>
+              <h4 onClick={() => SetUserDetailsModel(true)}>Ali Ahmad</h4>
             </div>
           </div>
           <div className="vs">
@@ -153,12 +157,12 @@ function MatchesBox() {
             <div className="user-box">
               <span>T4</span>
               <Image src="/User/User1.jpeg" width={30} height={30} alt="User" />
-              <h4>Ali Ahmad</h4>
+              <h4 onClick={() => SetUserDetailsModel(true)}>Ali Ahmad</h4>
             </div>
             <div className="user-box">
               <span>T4</span>
               <Image src="/User/User1.jpeg" width={30} height={30} alt="User" />
-              <h4>Ali Ahmad</h4>
+              <h4 onClick={() => SetUserDetailsModel(true)}>Ali Ahmad</h4>
             </div>
           </div>
         </div>

@@ -1,0 +1,73 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# UserModelPopup
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.UserModelPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  background: #00000033;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+}
+.UserModelPopup .user-details-box {
+  position: relative;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 200px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fading 0.5s ease-in-out;
+}
+@keyframes fading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.UserModelPopup .user-details-box .user-image-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.UserModelPopup .user-details-box .user-image-content img {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.UserModelPopup .user-details-box .user-image-content h3 {
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  color: #37434a;
+}
+.UserModelPopup .user-details-box .box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.UserModelPopup .user-details-box .box img {
+  position: relative;
+  width: 45px;
+  height: 45px;
+}
+.UserModelPopup .user-details-box .box span {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  color: #646464;
+}

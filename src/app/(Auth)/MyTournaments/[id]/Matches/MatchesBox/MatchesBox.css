@@ -14,7 +14,7 @@
   transition: var(--main-transition);
 }
 .match-box-container.open {
-  padding: 30px 20px 30px 20px;
+  padding: 30px 20px 40px 20px;
 }
 .match-box-container::before {
   position: absolute;
@@ -31,7 +31,7 @@
 }
 .match-box-container.open::before {
   transform: rotate(-50deg);
-  bottom: 40%;
+  bottom: 35%;
   width: 100%;
   height: 35px;
 }
@@ -50,7 +50,7 @@
 }
 .match-box-container.open::after {
   transform: rotate(-50deg);
-  bottom: 100px;
+  bottom: 110px;
   height: 35px;
 }
 .match-box-container .General-Info {
@@ -59,6 +59,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  z-index: 3;
 }
 .match-box-container .General-Info h3 {
   position: relative;
@@ -102,13 +103,13 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin-top: -100%;
+  margin-top: -700%;
   opacity: 0;
   transition: var(--main-transition);
 }
 .match-box-container .DetailsCotainer-box.open {
-  opacity: 1;
   margin: 0;
+  opacity: 1;
 }
 .match-box-container .More-Matches-details {
   position: relative;
