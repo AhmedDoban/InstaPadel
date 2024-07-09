@@ -125,7 +125,7 @@
   border-spacing: 0;
 }
 @media (max-width: 992px) {
-  .Dashboards .Dashboardsleft .box-users .PlayersTable {
+  .Dashboards .Dashboardsleft .box-users .PlayersTable .TableBody {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;

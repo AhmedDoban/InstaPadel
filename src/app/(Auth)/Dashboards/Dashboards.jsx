@@ -67,42 +67,46 @@ function Dashboards() {
             </div>
           </div>
           <table className="PlayersTable">
-            <tr className="TableHead">
-              <th>Player ID</th>
-              <th>Full Name</th>
-              <th>User Name</th>
-              <th>Level</th>
-            </tr>
-            {users
-              .filter((user) =>
-                Search === ""
-                  ? user
-                  : user.FullName.toLowerCase().includes(Search.toLowerCase())
-              )
-              .map((user, index) => (
-                <tr key={index}>
-                  <td data-label="Player ID">
-                    <div className="user_Id_Data">
-                      <Image
-                        src={user.UserImage}
-                        width={35}
-                        height={35}
-                        alt={user.FullName}
-                      />
-                      {user.PlayerID}
-                    </div>
-                  </td>
-                  <td data-label="Full Name" className="FullName">
-                    <span>{user.FullName}</span>
-                  </td>
-                  <td className="UserName" data-label="User Name">
-                    {user.UserName}
-                  </td>
-                  <td className="Level" data-label="Level">
-                    <span>{user.Level}</span>
-                  </td>
-                </tr>
-              ))}
+            <thead className="TableHead">
+              <tr>
+                <th>Player ID</th>
+                <th>Full Name</th>
+                <th>User Name</th>
+                <th>Level</th>
+              </tr>
+            </thead>
+            <tbody className="TableBody">
+              {users
+                .filter((user) =>
+                  Search === ""
+                    ? true
+                    : user.FullName.toLowerCase().includes(Search.toLowerCase())
+                )
+                .map((user, index) => (
+                  <tr key={index}>
+                    <td data-label="Player ID">
+                      <div className="user_Id_Data">
+                        <Image
+                          src={user.UserImage}
+                          width={35}
+                          height={35}
+                          alt={user.FullName}
+                        />
+                        {user.PlayerID}
+                      </div>
+                    </td>
+                    <td data-label="Full Name" className="FullName">
+                      <span>{user.FullName}</span>
+                    </td>
+                    <td className="UserName" data-label="User Name">
+                      {user.UserName}
+                    </td>
+                    <td className="Level" data-label="Level">
+                      <span>{user.Level}</span>
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
           </table>
         </div>
         <div className="status-container">
