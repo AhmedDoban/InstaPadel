@@ -106,9 +106,6 @@
   font-weight: 300;
   color: #737c81;
 }
-.Leaderboard .Groups-container .group-box .PlayersTable tr:nth-child(2) td {
-  padding: 15px 0 5px 0 !important;
-}
 .Leaderboard .Groups-container .group-box .PlayersTable .user_Id_Data {
   position: relative;
   display: flex;

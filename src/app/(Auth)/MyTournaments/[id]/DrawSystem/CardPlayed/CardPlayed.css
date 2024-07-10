@@ -1,0 +1,83 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# CardPlayed
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.CardPlayed {
+  position: relative;
+  display: flex;
+  gap: 50px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  width: 300px;
+  height: 120px;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# CardPlayed competition
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.CardPlayed .competition-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.CardPlayed .competition-box .user-box {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  transition: var(--main-transition);
+}
+.CardPlayed .competition-box .user-box.loser {
+  opacity: 0.5;
+}
+.CardPlayed .competition-box .user-box span {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  color: #737c81;
+}
+.CardPlayed .competition-box .user-box img {
+  position: relative;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 25px;
+  height: 25px;
+}
+.CardPlayed .competition-box .user-box h4 {
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  color: #004077;
+  cursor: pointer;
+}
+.CardPlayed .competition-box .vs {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+}
+.CardPlayed .competition-box .vs.Isplayed {
+  opacity: 0.5;
+}
+.CardPlayed .competition-box .vs img {
+  height: 100%;
+  width: 100%;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# CardPlayed left
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.CardPlayed .left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--main-transition);
+}
+.CardPlayed .left.Isplayed {
+  opacity: 0.5;
+}
