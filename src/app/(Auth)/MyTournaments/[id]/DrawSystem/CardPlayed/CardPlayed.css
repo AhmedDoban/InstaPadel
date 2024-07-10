@@ -51,6 +51,7 @@
   font-weight: 400;
   color: #004077;
   cursor: pointer;
+  width: fit-content;
 }
 .CardPlayed .competition-box .vs {
   position: relative;

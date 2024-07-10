@@ -3,18 +3,26 @@ import { useRef, useState } from "react";
 import Head from "../HeadMyTournaments/HeadMyTournaments";
 import MatchesBox from "./MatchesBox/MatchesBox";
 import "./Matches.css";
-import UserModel from "./MatchesBox/UserModel/UserModel";
-import SummaryModel from "./MatchesBox/SummaryModel/SummaryModel";
-import ResultSummary from "./MatchesBox/ResultSummary/ResultSummary";
-import TimeModel from "./MatchesBox/TimeModel/TimeModel";
+import UserModel from "../CardsModel/UserModel/UserModel";
+import SummaryModel from "../CardsModel/SummaryModel/SummaryModel";
+import ResultSummary from "../CardsModel/ResultSummary/ResultSummary";
+import TimeModel from "../CardsModel/TimeModel/TimeModel";
 
-function Matches({ ShwonPage, SetShownPage }) {
+function Matches({
+  ShwonPage,
+  SetShownPage,
+  SetUserDetails,
+  UserDetails,
+  UserDetailsModel,
+  SetUserDetailsModel,
+  SetSummaryDetailsModel,
+  SetTimerModel,
+  SummaryDetailsModel,
+  SummaryResultModel,
+  SetSummaryResultModel,
+  TimerModel,
+}) {
   const [LoadedMatches, SetLoadedMatches] = useState([{}, {}, {}, {}]);
-  const [UserDetails, SetUserDetails] = useState({});
-  const [UserDetailsModel, SetUserDetailsModel] = useState(false);
-  const [SummaryDetailsModel, SetSummaryDetailsModel] = useState(false);
-  const [SummaryResultModel, SetSummaryResultModel] = useState(false);
-  const [TimerModel, SetTimerModel] = useState(false);
 
   return (
     <div className="Matches">

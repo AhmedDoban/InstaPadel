@@ -1,7 +1,7 @@
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-# TimeModel
+# LocationPopModel
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.TimeModel {
+.LocationPopModel {
   position: fixed;
   top: 0;
   left: 0;
@@ -15,9 +15,9 @@
   transition: var(--main-transition);
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-  # TimeModel TimeModel-details-box
-  ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.TimeModel .TimeModel-details-box {
+ # LocationPopModel LocationPopModel-details-box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.LocationPopModel .LocationPopModel-details-box {
   position: relative;
   background: #ffffff;
   border-radius: 10px;
@@ -36,26 +36,20 @@
   }
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-  # TimeModel TimeModel-details-box  TimeHead
+ # LocationPopModel LocationPopModel-details-box  TimeHead
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.TimeModel .TimeModel-details-box .TimeHead {
+.LocationPopModel .LocationPopModel-details-box .TimeHead {
   position: relative;
-  padding: 10px 20px;
+  padding: 25px 20px 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #eef1f4;
 }
-.TimeModel .TimeModel-details-box .TimeHead span {
-  position: relative;
-  font-size: 16px;
-  font-weight: 600;
-  color: #004077;
-}
+
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-  # TimeModel TimeModel-details-box  TimeBody
+ # LocationPopModel LocationPopModel-details-box  TimeBody
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.TimeModel .TimeModel-details-box .TimeBody {
+.LocationPopModel .LocationPopModel-details-box .TimeBody {
   position: relative;
   padding: 15px 10px 5px 10px;
   display: flex;
@@ -66,22 +60,23 @@
 }
 
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-  # TimeModel TimeModel-details-box Sets
-  ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.TimeModel .TimeModel-details-box .sets-box {
+    # LocationPopModel LocationPopModel-details-box Sets
+    ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.LocationPopModel .LocationPopModel-details-box .sets-box {
   position: relative;
   display: flex;
   gap: 10px;
   width: 100%;
 }
-.TimeModel .TimeModel-details-box .sets-input {
+.LocationPopModel .LocationPopModel-details-box .sets-input {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 5px;
   width: 100%;
 }
-.TimeModel .TimeModel-details-box .sets-input .input-box {
+.LocationPopModel .LocationPopModel-details-box .sets-input .input-box,
+.LocationPopModel .sets-input .DropdownSelect-box {
   position: relative;
   border: 1px solid #e7e8e9;
   outline: 0;
@@ -90,11 +85,18 @@
   border-radius: 10px;
   padding: 15px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 10px;
 }
-.TimeModel .TimeModel-details-box .sets-input .input-box input {
+.LocationPopModel .sets-input .DropdownSelect-box .DropdownSelect {
+  width: 100%;
+}
+.ReactDropdownSelect:focus,
+.css-wmy1p7-ReactDropdownSelect:focus-within {
+  outline: 0;
+  box-shadow: none !important;
+}
+.LocationPopModel .LocationPopModel-details-box .sets-input .input-box input {
   position: relative;
   width: 100%;
   height: 100%;
@@ -105,43 +107,23 @@
   font-weight: 300;
   font-size: 14px;
 }
-.TimeModel .input-box input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 1;
-  display: block;
-  background: url("../../../../../../../../public/Matches/calendar.svg")
-    no-repeat;
-  width: 15px;
-  height: 15px;
-  border-width: thin;
-  background-size: contain;
-  cursor: pointer;
-}
-.TimeModel .input-box input::-webkit-outer-spin-button,
-.TimeModel .input-box input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.TimeModel .TimeModel-details-box .sets-input .input-box input[type="number"] {
-  -moz-appearance: textfield;
-}
-.TimeModel .TimeModel-details-box .sets-input label {
+.LocationPopModel .LocationPopModel-details-box .sets-input label {
   position: relative;
   font-size: 16px;
   font-weight: 300;
   color: #545f71;
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-  # TimeModel TimeModel-details-box Sets
-  ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.TimeModel .TimeModel-details-box .sets-action-box {
+ # LocationPopModel LocationPopModel-details-box Sets
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.LocationPopModel .LocationPopModel-details-box .sets-action-box {
   position: relative;
   display: flex;
   align-items: center;
   gap: 7px;
   padding: 10px;
 }
-.TimeModel .TimeModel-details-box .sets-action-box button {
+.LocationPopModel .LocationPopModel-details-box .sets-action-box button {
   position: relative;
   width: 100%;
   padding: 13px;
@@ -152,11 +134,11 @@
   font-weight: 400;
   transition: var(--main-transition);
 }
-.TimeModel .TimeModel-details-box .sets-action-box button.Clear {
+.LocationPopModel .LocationPopModel-details-box .sets-action-box button.Clear {
   background-color: #f2fce6;
   color: #2f3942;
 }
-.TimeModel .TimeModel-details-box .sets-action-box button.Apply {
+.LocationPopModel .LocationPopModel-details-box .sets-action-box button.Apply {
   background-color: #81e200;
   color: #ffffff;
 }
