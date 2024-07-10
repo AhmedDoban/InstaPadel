@@ -5,8 +5,16 @@ import "./Leaderboard.css";
 import GroupBox from "./GroupBox/GroupBox";
 import { users } from "../../../Dashboards/DummyUsers.js";
 import Image from "next/image";
+import UserModel from "../CardsModel/UserModel/UserModel";
 
-function Leaderboard({ SetShownPage, ShwonPage }) {
+function Leaderboard({
+  SetShownPage,
+  ShwonPage,
+  UserDetails,
+  SetUserDetails,
+  UserDetailsModel,
+  SetUserDetailsModel,
+}) {
   const [leaderboardGroups, SetleaderboardGroups] = useState([{}, {}, {}, {}]);
   if (typeof window == undefined || !typeof window) return;
   return (
@@ -16,7 +24,14 @@ function Leaderboard({ SetShownPage, ShwonPage }) {
       </HeadMyTournaments>
       <div className="Groups-container">
         {leaderboardGroups.map((group, index) => (
-          <GroupBox group={group} index={index} key={index} users={users} />
+          <GroupBox
+            group={group}
+            index={index}
+            key={index}
+            users={users}
+            SetUserDetailsModel={SetUserDetailsModel}
+            SetUserDetails={SetUserDetails}
+          />
         ))}
       </div>
       <div className="waiting-list">
@@ -76,6 +91,12 @@ function Leaderboard({ SetShownPage, ShwonPage }) {
         </div>
         <div className="right"></div>
       </div>
+      {UserDetailsModel && (
+        <UserModel
+          UserDetails={UserDetails}
+          SetUserDetailsModel={SetUserDetailsModel}
+        />
+      )}
     </div>
   );
 }

@@ -3,9 +3,9 @@ import Image from "next/image";
 import "./UserModel.css";
 import { useRef } from "react";
 
-function UserModel({ SetUserDetailsModel, UserDetails }) {
+function UserModel({ SetUserDetailsModel, UserDetails = {} }) {
   const PopUpDetailsRef = useRef();
-
+  console.log(UserDetails);
   if (typeof window !== "undefined") {
     window.addEventListener("click", (e) => {
       if (PopUpDetailsRef.current !== null) {
@@ -21,8 +21,13 @@ function UserModel({ SetUserDetailsModel, UserDetails }) {
     <div className="UserModelPopup" ref={PopUpDetailsRef}>
       <div className="user-details-box">
         <div className="user-image-content">
-          <Image src="/user.png" width={70} height={70} alt="User" />
-          <h3>Salwa Emad</h3>
+          <Image
+            src={UserDetails ? UserDetails.UserImage : "/user.png"}
+            width={70}
+            height={70}
+            alt="User"
+          />
+          <h3>{UserDetails ? UserDetails.FullName : "Salwa Emad"}</h3>
         </div>
         <div className="box">
           <Image src="/Matches/Female.svg" width={50} height={50} alt="User" />

@@ -195,8 +195,6 @@ function DrawSystem({
         <UserModel
           UserDetails={UserDetails}
           SetUserDetailsModel={SetUserDetailsModel}
-          SetSummaryResultModel={SetSummaryResultModel}
-          SetSummaryDetailsModel={SetSummaryDetailsModel}
         />
       )}
       {SummaryDetailsModel && (

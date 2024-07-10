@@ -2,7 +2,17 @@
 import "./GroupBox.css";
 import Image from "next/image";
 
-function GroupBox({ group, index, users }) {
+function GroupBox({
+  group,
+  index,
+  users,
+  SetUserDetailsModel,
+  SetUserDetails,
+}) {
+  const UserDetailsModelPopuphandelarr = (data) => {
+    SetUserDetails(data);
+    SetUserDetailsModel(true);
+  };
   return (
     <div className="group-box">
       <div className="group-title">
@@ -51,7 +61,9 @@ function GroupBox({ group, index, users }) {
                     height={35}
                     alt={user.FullName}
                   />
-                  <span>{user.FullName}</span>
+                  <span onClick={() => UserDetailsModelPopuphandelarr(user)}>
+                    {user.FullName}
+                  </span>
                 </div>
               </td>
               <td data-label="GP">
