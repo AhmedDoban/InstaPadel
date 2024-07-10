@@ -1,6 +1,8 @@
 "use client";
+import { useState } from "react";
 import "./GroupBox.css";
 import Image from "next/image";
+import Swal from "sweetalert2";
 
 function GroupBox({
   group,
@@ -9,10 +11,31 @@ function GroupBox({
   SetUserDetailsModel,
   SetUserDetails,
 }) {
+  const [UsersTour, SetUsersTour] = useState(users.slice(0, 4));
   const UserDetailsModelPopuphandelarr = (data) => {
     SetUserDetails(data);
     SetUserDetailsModel(true);
   };
+  const DeleteUser = (index) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: `You wont to delete this Player ? `,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: `<i class="fa-solid fa-check"></i>`,
+      cancelButtonText: `<i class="fa-solid fa-xmark"></i>`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        let NewUsersData = [...UsersTour];
+        NewUsersData.splice(index, 1);
+        SetUsersTour(NewUsersData);
+        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+      }
+    });
+  };
+
   return (
     <div className="group-box">
       <div className="group-title">
@@ -50,7 +73,7 @@ function GroupBox({
           </tr>
         </thead>
         <tbody className="TableBody">
-          {users.slice(0, 4).map((user, index) => (
+          {UsersTour.map((user, index) => (
             <tr key={index}>
               <td data-label="N">T{index + 1}</td>
               <td data-label="Name" colSpan={5}>
@@ -91,7 +114,7 @@ function GroupBox({
                       alt="player-repeat"
                     />
                   </button>
-                  <button>
+                  <button onClick={() => DeleteUser(index)}>
                     <Image
                       src="/MyTournaments/delete.svg"
                       width={18}

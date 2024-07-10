@@ -5,7 +5,7 @@ import { useRef } from "react";
 
 function UserModel({ SetUserDetailsModel, UserDetails = {} }) {
   const PopUpDetailsRef = useRef();
-  console.log(UserDetails);
+
   if (typeof window !== "undefined") {
     window.addEventListener("click", (e) => {
       if (PopUpDetailsRef.current !== null) {
