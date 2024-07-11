@@ -3,19 +3,17 @@ import { useState } from "react";
 import "./GroupBox.css";
 import Image from "next/image";
 import Swal from "sweetalert2";
+import { useDispatch } from "react-redux";
+import { DeleteLeadBoardUser } from "@/Toolkit/Slices/TournamentsSlice";
 
-function GroupBox({
-  group,
-  index,
-  users,
-  SetUserDetailsModel,
-  SetUserDetails,
-}) {
-  const [UsersTour, SetUsersTour] = useState(users.slice(0, 4));
+function GroupBox({ group, index, SetUserDetailsModel, SetUserDetails }) {
+  const Dispatch = useDispatch();
+
   const UserDetailsModelPopuphandelarr = (data) => {
     SetUserDetails(data);
     SetUserDetailsModel(true);
   };
+
   const DeleteUser = (index) => {
     Swal.fire({
       title: "Are you sure?",
@@ -28,9 +26,9 @@ function GroupBox({
       cancelButtonText: `<i class="fa-solid fa-xmark"></i>`,
     }).then((result) => {
       if (result.isConfirmed) {
-        let NewUsersData = [...UsersTour];
-        NewUsersData.splice(index, 1);
-        SetUsersTour(NewUsersData);
+        Dispatch(
+          DeleteLeadBoardUser({ GroupId: group.GroupId - 1, Index: index })
+        );
         Swal.fire("Deleted!", "Your file has been deleted.", "success");
       }
     });
@@ -49,14 +47,6 @@ function GroupBox({
               alt="add users"
             />
           </button>
-          <button>
-            <Image
-              src="/MyTournaments/more.svg"
-              width={25}
-              height={25}
-              alt="more options"
-            />
-          </button>
         </div>
       </div>
       <table className="PlayersTable">
@@ -69,11 +59,11 @@ function GroupBox({
             <th>l</th>
             <th>S</th>
             <th>+/-</th>
-            <th colSpan={2}></th>
+            <th></th>
           </tr>
         </thead>
         <tbody className="TableBody">
-          {UsersTour.map((user, index) => (
+          {group.Players.map((user, index) => (
             <tr key={index}>
               <td data-label="N">T{index + 1}</td>
               <td data-label="Name" colSpan={5}>
@@ -104,16 +94,8 @@ function GroupBox({
               <td data-label="+/-">
                 <span>0</span>
               </td>
-              <td data-label="actions" colSpan={2}>
+              <td data-label="actions">
                 <div className="actions">
-                  <button>
-                    <Image
-                      src="/MyTournaments/player-repeat.svg"
-                      width={18}
-                      height={18}
-                      alt="player-repeat"
-                    />
-                  </button>
                   <button onClick={() => DeleteUser(index)}>
                     <Image
                       src="/MyTournaments/delete.svg"

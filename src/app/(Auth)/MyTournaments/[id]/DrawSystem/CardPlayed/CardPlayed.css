@@ -21,13 +21,22 @@
   justify-content: space-between;
   align-items: center;
   gap: 5px;
+  width: 100%;
 }
 .CardPlayed .competition-box .user-box {
   position: relative;
   display: flex;
   gap: 10px;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   transition: var(--main-transition);
+}
+.CardPlayed .competition-box .user-box .info {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 .CardPlayed .competition-box .user-box.loser {
   opacity: 0.5;
@@ -47,8 +56,8 @@
 }
 .CardPlayed .competition-box .user-box h4 {
   position: relative;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 300;
   color: #004077;
   cursor: pointer;
   width: fit-content;
@@ -81,4 +90,22 @@
 }
 .CardPlayed .left.Isplayed {
   opacity: 0.5;
+}
+
+.CardPlayed .competition-box .actions {
+  position: relative;
+  width: 15px;
+  height: 15px;
+}
+.CardPlayed .competition-box .actions img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.CardPlayed .competition-box .NoPlayerSelected {
+  position: relative;
+  color: #737c81;
+  font-weight: 300;
+  font-size: 14px;
 }

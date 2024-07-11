@@ -64,6 +64,9 @@
 }
 .DrawSystem .DrawContainer-chart .winner {
   position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 80px;
   margin-bottom: 30px;
 }
 

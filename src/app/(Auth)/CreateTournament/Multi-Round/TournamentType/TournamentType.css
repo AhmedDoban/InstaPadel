@@ -164,7 +164,7 @@
   height: 20px;
 }
 
-.TournamentType .TournamentType-box .Multi-box button {
+.TournamentType .TournamentType-box .Multi-box .Redirect {
   position: relative;
   width: 50%;
   background-color: #81e200;
@@ -176,9 +176,12 @@
   font-size: 16px;
   font-weight: 400;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 1200px) {
-  .TournamentType .TournamentType-box .Multi-box button {
+  .TournamentType .TournamentType-box .Multi-box .Redirect {
     width: 100%;
   }
 }

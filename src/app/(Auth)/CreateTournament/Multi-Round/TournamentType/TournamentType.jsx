@@ -166,7 +166,9 @@ function TournamentType({
             </div>
           </div>
           <div className="Multi-box">
-            <button onClick={() => SetPageLoaded(2)}>Create Tournament</button>
+            <Link href="/MyTournaments" className="Redirect">
+              Create Tournament
+            </Link>
           </div>
         </div>
         <div className={`Multi-right ${TourState ? "Singles" : "Doubles"}`}>

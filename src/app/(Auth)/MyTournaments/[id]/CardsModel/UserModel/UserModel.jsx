@@ -3,7 +3,7 @@ import Image from "next/image";
 import "./UserModel.css";
 import { useRef } from "react";
 
-function UserModel({ SetUserDetailsModel, UserDetails = {} }) {
+function UserModel({ SetUserDetailsModel, UserDetails }) {
   const PopUpDetailsRef = useRef();
 
   if (typeof window !== "undefined") {
@@ -22,12 +22,12 @@ function UserModel({ SetUserDetailsModel, UserDetails = {} }) {
       <div className="user-details-box">
         <div className="user-image-content">
           <Image
-            src={UserDetails ? UserDetails.UserImage : "/user.png"}
+            src={UserDetails ? UserDetails?.UserImage : "/user.png"}
             width={70}
             height={70}
             alt="User"
           />
-          <h3>{UserDetails ? UserDetails.FullName : "Salwa Emad"}</h3>
+          <h3>{UserDetails ? UserDetails?.FullName : "Salwa Emad"}</h3>
         </div>
         <div className="box">
           <Image src="/Matches/Female.svg" width={50} height={50} alt="User" />
