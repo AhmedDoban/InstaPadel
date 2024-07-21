@@ -89,16 +89,16 @@ function Header() {
           {UserMenu && (
             <ul className="other-links">
               <li>
-                <div className="information">
+                <Link className="information" href="/MyProfile">
                   <Image src="/user.png" alt="user" width={50} height={50} />
                   <div className="UserInfo">
                     <h1>George Mikhail</h1>
                     <p>georgemikhaiell@g...</p>
                   </div>
-                </div>
+                </Link>
               </li>
               <li>
-                <Link href="ChangePassword">
+                <Link href="/MyProfile/Change_Password">
                   <Image
                     src="/Icon/lock-closed.svg"
                     alt="look"

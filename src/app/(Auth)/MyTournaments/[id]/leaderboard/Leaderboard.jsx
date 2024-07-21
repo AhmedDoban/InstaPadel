@@ -5,10 +5,11 @@ import GroupBox from "./GroupBox/GroupBox";
 import UserModel from "../CardsModel/UserModel/UserModel";
 import WaitingList from "../WaitingList/WaitingList.jsx";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 function Leaderboard({
   SetShownPage,
-  ShwonPage,
+  ShownPage,
   UserDetails,
   SetUserDetails,
   UserDetailsModel,
@@ -17,12 +18,18 @@ function Leaderboard({
   const TournamentsLeadBoard = useSelector(
     (State) => State.Tournaments.leaderboard
   );
+  const [TourStaus, SetTourStatus] = useState(true);
 
   if (typeof window == undefined || !typeof window) return;
   return (
     <div className="Leaderboard">
-      <HeadMyTournaments Title={ShwonPage} SetShownPage={SetShownPage}>
-        <button>Start Tournament</button>
+      <HeadMyTournaments Title={ShownPage} SetShownPage={SetShownPage}>
+        <button
+          onClick={() => SetTourStatus(false)}
+          className={!TourStaus ? "active" : ""}
+        >
+          Start Tournament
+        </button>
       </HeadMyTournaments>
       <div className="Groups-container">
         {TournamentsLeadBoard.map((group, index) => (
@@ -32,10 +39,12 @@ function Leaderboard({
             key={index}
             SetUserDetailsModel={SetUserDetailsModel}
             SetUserDetails={SetUserDetails}
+            TourStaus={TourStaus}
           />
         ))}
       </div>
-      <WaitingList />
+      {TourStaus && <WaitingList />}
+
       {UserDetailsModel && (
         <UserModel
           UserDetails={UserDetails}

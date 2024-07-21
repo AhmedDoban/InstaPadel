@@ -6,7 +6,7 @@ import { DeleteLeadBoardUser } from "@/Toolkit/Slices/TournamentsSlice";
 import { useDispatch } from "react-redux";
 
 function CardPlayed({
-  Isplayed = true,
+  Isplayed = false,
   Winner = false,
   SetUserDetailsModel,
   SetSummaryResultModel,
@@ -20,6 +20,7 @@ function CardPlayed({
   WhoWinner,
   DataBase,
   SetUserDetails,
+  KnockoutStatus,
 }) {
   const Dispatch = useDispatch();
   const UserDetailsModelPopuphandelarr = (data) => {
@@ -115,19 +116,21 @@ function CardPlayed({
                 )}
               </h4>
             </div>
-            <div
-              className="actions"
-              onClick={() =>
-                DeleteUser(Player1GroupNumber - 1, Player1Index - 1)
-              }
-            >
-              <Image
-                src="/MyTournaments/delete.svg"
-                width={10}
-                height={10}
-                alt="Delete"
-              />
-            </div>
+            {!KnockoutStatus && (
+              <div
+                className="actions"
+                onClick={() =>
+                  DeleteUser(Player1GroupNumber - 1, Player1Index - 1)
+                }
+              >
+                <Image
+                  src="/MyTournaments/delete.svg"
+                  width={10}
+                  height={10}
+                  alt="Delete"
+                />
+              </div>
+            )}
           </div>
         ) : (
           <p className="NoPlayerSelected">There is no Player Selected</p>
@@ -175,20 +178,21 @@ function CardPlayed({
                 )}
               </h4>
             </div>
-
-            <div
-              className="actions"
-              onClick={() =>
-                DeleteUser(Player1GroupNumber - 1, Player1Index - 1)
-              }
-            >
-              <Image
-                src="/MyTournaments/delete.svg"
-                width={10}
-                height={10}
-                alt="Delete"
-              />
-            </div>
+            {!KnockoutStatus && (
+              <div
+                className="actions"
+                onClick={() =>
+                  DeleteUser(Player1GroupNumber - 1, Player1Index - 1)
+                }
+              >
+                <Image
+                  src="/MyTournaments/delete.svg"
+                  width={10}
+                  height={10}
+                  alt="Delete"
+                />
+              </div>
+            )}
           </div>
         ) : (
           <p className="NoPlayerSelected">There is no Player Selected</p>

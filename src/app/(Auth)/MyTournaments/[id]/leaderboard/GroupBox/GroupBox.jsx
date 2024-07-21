@@ -6,7 +6,13 @@ import Swal from "sweetalert2";
 import { useDispatch } from "react-redux";
 import { DeleteLeadBoardUser } from "@/Toolkit/Slices/TournamentsSlice";
 
-function GroupBox({ group, index, SetUserDetailsModel, SetUserDetails }) {
+function GroupBox({
+  group,
+  index,
+  SetUserDetailsModel,
+  SetUserDetails,
+  TourStaus,
+}) {
   const Dispatch = useDispatch();
 
   const UserDetailsModelPopuphandelarr = (data) => {
@@ -38,16 +44,18 @@ function GroupBox({ group, index, SetUserDetailsModel, SetUserDetails }) {
     <div className="group-box">
       <div className="group-title">
         <h1>Group {index + 1}</h1>
-        <div className="actions">
-          <button>
-            <Image
-              src="/MyTournaments/add.svg"
-              width={25}
-              height={25}
-              alt="add users"
-            />
-          </button>
-        </div>
+        {TourStaus && (
+          <div className="actions">
+            <button>
+              <Image
+                src="/MyTournaments/add.svg"
+                width={25}
+                height={25}
+                alt="add users"
+              />
+            </button>
+          </div>
+        )}
       </div>
       <table className="PlayersTable">
         <thead className="TableHead">
@@ -59,7 +67,7 @@ function GroupBox({ group, index, SetUserDetailsModel, SetUserDetails }) {
             <th>l</th>
             <th>S</th>
             <th>+/-</th>
-            <th></th>
+            {TourStaus && <th></th>}
           </tr>
         </thead>
         <tbody className="TableBody">
@@ -94,18 +102,20 @@ function GroupBox({ group, index, SetUserDetailsModel, SetUserDetails }) {
               <td data-label="+/-">
                 <span>0</span>
               </td>
-              <td data-label="actions">
-                <div className="actions">
-                  <button onClick={() => DeleteUser(index)}>
-                    <Image
-                      src="/MyTournaments/delete.svg"
-                      width={18}
-                      height={18}
-                      alt="delete user"
-                    />
-                  </button>
-                </div>
-              </td>
+              {TourStaus && (
+                <td data-label="actions">
+                  <div className="actions">
+                    <button onClick={() => DeleteUser(index)}>
+                      <Image
+                        src="/MyTournaments/delete.svg"
+                        width={18}
+                        height={18}
+                        alt="delete user"
+                      />
+                    </button>
+                  </div>
+                </td>
+              )}
             </tr>
           ))}
         </tbody>

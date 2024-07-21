@@ -58,10 +58,6 @@ function WaitingList() {
       <div className="left">
         <div className="head-waiting">
           <h1>Waiting list</h1>
-          <ul className="actions">
-            <li className="active"> Players</li>
-            <li> Waiting list</li>
-          </ul>
         </div>
         <div className="waiting-body">
           {TournamentsWaitingList.length > 0 ? (

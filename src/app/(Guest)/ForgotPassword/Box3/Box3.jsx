@@ -34,10 +34,6 @@ function Box3() {
           />
           <i className="fa-solid fa-eye"></i>
         </div>
-        <div className="remember-me">
-          <input type="checkbox" name="RememberMe" id="RememberMe" hidden />
-          <label htmlFor="RememberMe">Remember me</label>
-        </div>
         <div className="Action-button">
           <button>Update Password</button>
         </div>

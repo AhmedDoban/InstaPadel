@@ -12,22 +12,22 @@ function HeadMyTournaments({ Title, SetShownPage, children }) {
       </div>
       <ul className="Tournaments-nav-link">
         <li
-          className={Title == "leaderboard" ? "active" : ""}
-          onClick={() => SetShownPage("leaderboard")}
+          className={Title == "Leaderboard" ? "active" : ""}
+          onClick={() => SetShownPage("Leaderboard")}
         >
-          leaderboard
+          Leaderboard
         </li>
         <li
-          className={Title == "Matches" ? "active" : ""}
-          onClick={() => SetShownPage("Matches")}
+          className={Title == "Group Stage" ? "active" : ""}
+          onClick={() => SetShownPage("Group Stage")}
         >
-          Matches
+          Group Stage
         </li>
         <li
-          className={Title == "Draw System" ? "active" : ""}
-          onClick={() => SetShownPage("Draw System")}
+          className={Title == "Knockout Stage" ? "active" : ""}
+          onClick={() => SetShownPage("Knockout Stage")}
         >
-          Draw System
+          Knockout Stage
         </li>
       </ul>
       <div className="box">{children}</div>

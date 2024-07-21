@@ -6,7 +6,7 @@ import Matches from "./Matches/Matches";
 import DrawSystem from "./DrawSystem/DrawSystem";
 
 function Page() {
-  const [ShwonPage, SetShownPage] = useState("leaderboard");
+  const [ShownPage, SetShownPage] = useState("Leaderboard");
   const [UserDetails, SetUserDetails] = useState({});
   const [UserDetailsModel, SetUserDetailsModel] = useState(false);
   const [SummaryDetailsModel, SetSummaryDetailsModel] = useState(false);
@@ -16,9 +16,9 @@ function Page() {
 
   return (
     <AuthWrapper>
-      {ShwonPage == "leaderboard" && (
+      {ShownPage == "Leaderboard" && (
         <Leaderboard
-          ShwonPage={ShwonPage}
+          ShownPage={ShownPage}
           SetShownPage={SetShownPage}
           UserDetails={UserDetails}
           SetUserDetails={SetUserDetails}
@@ -32,9 +32,9 @@ function Page() {
           SetTimerModel={SetTimerModel}
         />
       )}
-      {ShwonPage == "Matches" && (
+      {ShownPage == "Group Stage" && (
         <Matches
-          ShwonPage={ShwonPage}
+          ShownPage={ShownPage}
           SetShownPage={SetShownPage}
           UserDetails={UserDetails}
           SetUserDetails={SetUserDetails}
@@ -48,9 +48,9 @@ function Page() {
           SetTimerModel={SetTimerModel}
         />
       )}
-      {ShwonPage == "Draw System" && (
+      {ShownPage == "Knockout Stage" && (
         <DrawSystem
-          ShwonPage={ShwonPage}
+          ShownPage={ShownPage}
           SetShownPage={SetShownPage}
           UserDetails={UserDetails}
           SetUserDetails={SetUserDetails}

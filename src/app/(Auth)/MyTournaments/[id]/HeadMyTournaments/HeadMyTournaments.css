@@ -59,7 +59,7 @@
     width: 30%;
   }
 }
-.My-Tournaments-Head-action .box button {
+.My-Tournaments-Head-action .box > button {
   position: relative;
   width: 100%;
   display: flex;
@@ -78,6 +78,10 @@
   cursor: pointer;
   transition: var(--main-transition);
 }
+.My-Tournaments-Head-action .box button.active {
+  position: relative;
+  background-color: #6d747b;
+}
 @media (max-width: 992px) {
   .My-Tournaments-Head-action .boxTitle {
     width: 100%;
@@ -86,4 +90,33 @@
     width: fit-content;
     padding: 8px;
   }
+}
+.My-Tournaments-Head-action .box .Actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.My-Tournaments-Head-action .box .Actions > button {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 13px;
+  background-color: #81e200;
+  border-radius: 8px;
+  min-width: fit-content;
+  max-width: 100%;
+  border: 0;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.My-Tournaments-Head-action .box .Actions button.active {
+  position: relative;
+  background-color: #6d747b;
 }

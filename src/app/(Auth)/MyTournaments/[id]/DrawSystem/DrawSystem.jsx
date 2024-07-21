@@ -11,9 +11,10 @@ import TimeModel from "../CardsModel/TimeModel/TimeModel";
 import LocationPopModel from "../CardsModel/LocationModel/LocationPopModel";
 import WaitingList from "../WaitingList/WaitingList";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 function DrawSystem({
-  ShwonPage,
+  ShownPage,
   SetShownPage,
   SetUserDetails,
   UserDetails,
@@ -31,25 +32,34 @@ function DrawSystem({
   const TournamentsLeadBoard = useSelector(
     (State) => State.Tournaments.leaderboard
   );
+  const [KnockoutStatus, SetKnockoutStatus] = useState(false);
 
   return (
     <div className="DrawSystem">
-      <Head Title={ShwonPage} SetShownPage={SetShownPage}>
-        <button>
-          <Image
-            width={18}
-            height={18}
-            alt="Download"
-            src="/MyTournaments/download.svg"
-          />
-          Download excel
-        </button>
+      <Head Title={ShownPage} SetShownPage={SetShownPage}>
+        <div className="Actions">
+          <button
+            className={KnockoutStatus ? "active" : ""}
+            onClick={() => SetKnockoutStatus(true)}
+          >
+            Start Knockout stage
+          </button>
+          <button>
+            <Image
+              width={18}
+              height={18}
+              alt="Download"
+              src="/MyTournaments/download.svg"
+            />
+          </button>
+        </div>
       </Head>
       <div className="DrawContainer-chart">
         <div className="left">
           <div className="card-played-box">
             <div className="left-played">
               <CardPlayed
+                KnockoutStatus={KnockoutStatus}
                 SetUserDetails={SetUserDetails}
                 SetLocationModel={SetLocationModel}
                 SetUserDetailsModel={SetUserDetailsModel}
@@ -64,6 +74,7 @@ function DrawSystem({
                 DataBase={TournamentsLeadBoard}
               />
               <CardPlayed
+                KnockoutStatus={KnockoutStatus}
                 SetUserDetails={SetUserDetails}
                 SetLocationModel={SetLocationModel}
                 SetUserDetailsModel={SetUserDetailsModel}
@@ -85,6 +96,7 @@ function DrawSystem({
               alt="LeftArrowSmall"
             />
             <CardPlayed
+              KnockoutStatus={KnockoutStatus}
               SetUserDetails={SetUserDetails}
               SetLocationModel={SetLocationModel}
               SetUserDetailsModel={SetUserDetailsModel}
@@ -102,6 +114,7 @@ function DrawSystem({
           <div className="card-played-box">
             <div className="left-played">
               <CardPlayed
+                KnockoutStatus={KnockoutStatus}
                 SetUserDetails={SetUserDetails}
                 SetLocationModel={SetLocationModel}
                 SetUserDetailsModel={SetUserDetailsModel}
@@ -116,6 +129,7 @@ function DrawSystem({
                 DataBase={TournamentsLeadBoard}
               />
               <CardPlayed
+                KnockoutStatus={KnockoutStatus}
                 SetUserDetails={SetUserDetails}
                 SetLocationModel={SetLocationModel}
                 SetUserDetailsModel={SetUserDetailsModel}
@@ -137,6 +151,7 @@ function DrawSystem({
               alt="LeftArrowSmall"
             />
             <CardPlayed
+              KnockoutStatus={KnockoutStatus}
               SetUserDetails={SetUserDetails}
               SetLocationModel={SetLocationModel}
               SetUserDetailsModel={SetUserDetailsModel}
@@ -160,6 +175,7 @@ function DrawSystem({
         />
         <div className="winner">
           <CardPlayed
+            KnockoutStatus={KnockoutStatus}
             SetUserDetails={SetUserDetails}
             SetLocationModel={SetLocationModel}
             Winner={true}
@@ -176,6 +192,7 @@ function DrawSystem({
           />
           <div className="center-Winner">
             <CardPlayed
+              KnockoutStatus={KnockoutStatus}
               SetUserDetails={SetUserDetails}
               SetLocationModel={SetLocationModel}
               Winner={true}
@@ -193,6 +210,7 @@ function DrawSystem({
           </div>
 
           <CardPlayed
+            KnockoutStatus={KnockoutStatus}
             SetUserDetails={SetUserDetails}
             SetLocationModel={SetLocationModel}
             Winner={true}
@@ -218,6 +236,7 @@ function DrawSystem({
           <div className="card-played-box">
             <div className="right-played">
               <CardPlayed
+                KnockoutStatus={KnockoutStatus}
                 SetUserDetails={SetUserDetails}
                 SetLocationModel={SetLocationModel}
                 SetUserDetailsModel={SetUserDetailsModel}
@@ -232,6 +251,7 @@ function DrawSystem({
                 DataBase={TournamentsLeadBoard}
               />
               <CardPlayed
+                KnockoutStatus={KnockoutStatus}
                 SetUserDetails={SetUserDetails}
                 SetLocationModel={SetLocationModel}
                 SetUserDetailsModel={SetUserDetailsModel}
@@ -253,6 +273,7 @@ function DrawSystem({
               alt="LeftArrowSmall"
             />
             <CardPlayed
+              KnockoutStatus={KnockoutStatus}
               SetUserDetails={SetUserDetails}
               SetLocationModel={SetLocationModel}
               SetUserDetailsModel={SetUserDetailsModel}
@@ -270,6 +291,7 @@ function DrawSystem({
           <div className="card-played-box">
             <div className="right-played">
               <CardPlayed
+                KnockoutStatus={KnockoutStatus}
                 SetUserDetails={SetUserDetails}
                 SetLocationModel={SetLocationModel}
                 SetUserDetailsModel={SetUserDetailsModel}
@@ -284,6 +306,7 @@ function DrawSystem({
                 DataBase={TournamentsLeadBoard}
               />
               <CardPlayed
+                KnockoutStatus={KnockoutStatus}
                 SetUserDetails={SetUserDetails}
                 SetLocationModel={SetLocationModel}
                 SetUserDetailsModel={SetUserDetailsModel}
@@ -305,6 +328,7 @@ function DrawSystem({
               alt="LeftArrowSmall"
             />
             <CardPlayed
+              KnockoutStatus={KnockoutStatus}
               SetUserDetails={SetUserDetails}
               SetLocationModel={SetLocationModel}
               SetUserDetailsModel={SetUserDetailsModel}
@@ -321,7 +345,7 @@ function DrawSystem({
           </div>
         </div>
       </div>
-      <WaitingList />
+      {!KnockoutStatus && <WaitingList />}
       {UserDetailsModel && (
         <UserModel
           UserDetails={UserDetails}

@@ -9,7 +9,7 @@ import ResultSummary from "../CardsModel/ResultSummary/ResultSummary";
 import TimeModel from "../CardsModel/TimeModel/TimeModel";
 
 function Matches({
-  ShwonPage,
+  ShownPage,
   SetShownPage,
   SetUserDetails,
   UserDetails,
@@ -26,7 +26,7 @@ function Matches({
 
   return (
     <div className="Matches">
-      <Head Title={ShwonPage} SetShownPage={SetShownPage}>
+      <Head Title={ShownPage} SetShownPage={SetShownPage}>
         <button>Start next Stage</button>
       </Head>
       <div className="Matchs-container">
