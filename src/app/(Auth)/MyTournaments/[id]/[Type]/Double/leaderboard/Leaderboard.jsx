@@ -16,7 +16,7 @@ function Leaderboard({
   SetUserDetailsModel,
 }) {
   const TournamentsLeadBoard = useSelector(
-    (State) => State.Tournaments.leaderboardSingle
+    (State) => State.Tournaments.leaderboardDouble
   );
   const [TourStaus, SetTourStatus] = useState(true);
 

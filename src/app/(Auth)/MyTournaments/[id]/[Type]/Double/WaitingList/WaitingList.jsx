@@ -4,20 +4,22 @@ import "./WaitingList.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useRef, useState } from "react";
 import MainTitle from "@/Components/MainTitle/MainTitle";
-import { AddLeadBoardUser } from "@/Toolkit/Slices/TournamentsSlice";
+import { AddLeadBoardDoubleUser } from "@/Toolkit/Slices/TournamentsSlice";
+import UsersDoubleBox from "../UsersDoubleBox/UsersDoubleBox";
 
 function WaitingList() {
   const WatingListResult = useRef();
   const Dispatch = useDispatch();
   const TournamentsWaitingList = useSelector(
-    (State) => State.Tournaments.WaitingListleaderboardSingle
+    (State) => State.Tournaments.WaitingListleaderboardDouble
   );
-  const TournamentsLeadBoard = useSelector(
-    (State) => State.Tournaments.leaderboard
+  const leaderboardDouble = useSelector(
+    (State) => State.Tournaments.leaderboardDouble
   );
   const [SelectGroup, SetSelectGroup] = useState(false);
   const [SelectedUser, SetSelectedUser] = useState(null);
   const [SelectedUserIndex, SetSelectedUserIndex] = useState(null);
+  const [More, SetMore] = useState(8);
 
   const AcceptBtnAction = (user, index) => {
     SetSelectGroup(true);
@@ -28,7 +30,7 @@ function WaitingList() {
   const AddUserToGroup = (GroupId) => {
     if (SelectedUser !== null && SelectedUserIndex !== null) {
       Dispatch(
-        AddLeadBoardUser({
+        AddLeadBoardDoubleUser({
           Player: SelectedUser,
           Index: SelectedUserIndex,
           GroupId: GroupId,
@@ -53,51 +55,69 @@ function WaitingList() {
     });
   }
 
+  const HandleNext = () => {
+    const WatingListlen = TournamentsWaitingList.length;
+    if (More < WatingListlen) {
+      SetMore(More + 8);
+    }
+  };
+  const HandlePrev = () => {
+    if (More > 0 && More > 8) {
+      SetMore((prev) => prev - 8);
+    } else {
+      SetMore(8);
+    }
+  };
+
   return (
     <div className="waiting-list">
       <div className="left">
         <div className="head-waiting">
-          <h1>Waiting list</h1>
+          <h1>Teams list</h1>
         </div>
         <div className="waiting-body">
           {TournamentsWaitingList.length > 0 ? (
             <>
-              {TournamentsWaitingList.map((user, index) => (
-                <div className="user-box" key={user.PlayerID}>
-                  <div className="info">
-                    <span className="Circle"></span>
-                    <Image
-                      src={user.UserImage}
-                      width={20}
-                      height={20}
-                      alt="user"
-                    />
-                    <h3>{user.FullName}</h3>
+              {TournamentsWaitingList.slice(More - 8, More).map(
+                (user, index) => (
+                  <div className="user-box" key={index}>
+                    <UsersDoubleBox user={user} />
+                    <div className="actions">
+                      <button
+                        className="Accept"
+                        onClick={() => AcceptBtnAction(user, index)}
+                      >
+                        Accept
+                      </button>
+                      <button className="Reject">Reject</button>
+                    </div>
                   </div>
-                  <div className="actions">
-                    <button
-                      className="Accept"
-                      onClick={() => AcceptBtnAction(user, index)}
-                    >
-                      Accept
-                    </button>
-                    <button className="Reject">Reject</button>
-                  </div>
-                </div>
-              ))}
+                )
+              )}
 
               <div className="more-actions">
-                <span>More</span>
-                <Image
-                  src="/MyTournaments/arrow-right.svg"
-                  width={15}
-                  height={15}
-                  alt="arrow-right"
-                />
+                <button onClick={() => HandlePrev()} className="Prev">
+                  <span>Prev</span>
+                  <Image
+                    src="/MyTournaments/arrow-right.svg"
+                    width={15}
+                    height={15}
+                    alt="arrow-right"
+                  />
+                </button>
+                <button onClick={() => HandleNext()}>
+                  <span>Next</span>
+                  <Image
+                    src="/MyTournaments/arrow-right.svg"
+                    width={15}
+                    height={15}
+                    alt="arrow-right"
+                  />
+                </button>
               </div>
             </>
           ) : (
-            <p>There is no players left in waiting list</p>
+            <p>There is no players left in Teams list</p>
           )}
         </div>
       </div>
@@ -108,7 +128,7 @@ function WaitingList() {
             <MainTitle FontSize="24px" Weight={600}>
               Select Group
             </MainTitle>
-            {TournamentsLeadBoard.map((group) => (
+            {leaderboardDouble.map((group) => (
               <div className="SelectGroup" key={group.GroupId}>
                 <button onClick={() => AddUserToGroup(group.GroupId)}>
                   {group.GroupName}

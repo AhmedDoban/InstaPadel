@@ -32,7 +32,7 @@ function Matches({
   return (
     <div className="Matches">
       <Head Title={ShownPage} SetShownPage={SetShownPage}>
-        <button>Start next Stage</button>
+        <button>Start next stage</button>
       </Head>
       <div className="Matchs-container">
         {LoadedMatches.map((mat, index) => (

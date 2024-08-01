@@ -18,7 +18,7 @@ function WaitingList() {
   const [SelectGroup, SetSelectGroup] = useState(false);
   const [SelectedUser, SetSelectedUser] = useState(null);
   const [SelectedUserIndex, SetSelectedUserIndex] = useState(null);
-  const [ShownPlayers, SetShownPlayers] = useState(2);
+  const [More, SetMore] = useState(8);
 
   const AcceptBtnAction = (user, index) => {
     SetSelectGroup(true);
@@ -41,10 +41,6 @@ function WaitingList() {
     }
   };
 
-  const ShowMore = () => {
-    SetShownPlayers(ShownPlayers + 2);
-  };
-
   if (typeof window !== "undefined") {
     window.addEventListener("click", (e) => {
       if (WatingListResult.current !== null) {
@@ -58,6 +54,20 @@ function WaitingList() {
     });
   }
 
+  const HandleNext = () => {
+    const WatingListlen = TournamentsWaitingList.length;
+    if (More < WatingListlen) {
+      SetMore(More + 8);
+    }
+  };
+  const HandlePrev = () => {
+    if (More > 0 && More > 8) {
+      SetMore((prev) => prev - 8);
+    } else {
+      SetMore(8);
+    }
+  };
+
   return (
     <div className="waiting-list">
       <div className="left">
@@ -67,9 +77,9 @@ function WaitingList() {
         <div className="waiting-body">
           {TournamentsWaitingList.length > 0 ? (
             <>
-              {TournamentsWaitingList.slice(0, ShownPlayers).map(
+              {TournamentsWaitingList.slice(More - 8, More).map(
                 (user, index) => (
-                  <div className="user-box" key={user.PlayerID}>
+                  <div className="user-box" key={index}>
                     <div className="info">
                       <span className="Circle"></span>
                       <Image
@@ -92,20 +102,31 @@ function WaitingList() {
                   </div>
                 )
               )}
+              {TournamentsWaitingList.length > 0 && (
+                <div className="more-actions">
+                  <button onClick={() => HandlePrev()} className="Prev">
+                    <span>Prev</span>
+                    <Image
+                      src="/MyTournaments/arrow-right.svg"
+                      width={15}
+                      height={15}
+                      alt="arrow-right"
+                    />
+                  </button>
+                  <button onClick={() => HandleNext()}>
+                    <span>Next</span>
+                    <Image
+                      src="/MyTournaments/arrow-right.svg"
+                      width={15}
+                      height={15}
+                      alt="arrow-right"
+                    />
+                  </button>
+                </div>
+              )}
             </>
           ) : (
             <p>There is no players left in waiting list</p>
-          )}
-          {TournamentsWaitingList.length > ShownPlayers && (
-            <div className="more-actions">
-              <span>More</span>
-              <Image
-                src="/MyTournaments/arrow-right.svg"
-                width={15}
-                height={15}
-                alt="arrow-right"
-              />
-            </div>
           )}
         </div>
       </div>

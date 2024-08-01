@@ -41,7 +41,7 @@ function DrawSystem({
             className={KnockoutStatus ? "active" : ""}
             onClick={() => SetKnockoutStatus(true)}
           >
-            Start Knockout stage
+            Start knockout stage
           </button>
           <button>
             <Image

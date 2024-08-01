@@ -36,7 +36,7 @@ function Footer() {
         </div>
       </div>
       <div className="copyright">
-        <span>Made with by o projects | ©2024</span>
+        <span>powered by o-projects | ©2024</span>
         <span>2024 @ all copyright reserved</span>
       </div>
     </div>

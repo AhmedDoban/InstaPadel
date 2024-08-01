@@ -2,8 +2,9 @@ import Image from "next/image";
 import "./CardPlayed.css";
 import Link from "next/link";
 import Swal from "sweetalert2";
-import { DeleteLeadBoardUser } from "@/Toolkit/Slices/TournamentsSlice";
+import { DeleteKnockoutDoubleWatingUser } from "@/Toolkit/Slices/TournamentsSlice";
 import { useDispatch } from "react-redux";
+import UsersDoubleBox from "../../UsersDoubleBox/UsersDoubleBox";
 
 function CardPlayed({
   Isplayed = false,
@@ -30,7 +31,7 @@ function CardPlayed({
   const DeleteUser = (PlayerGroupNumber, index) => {
     Swal.fire({
       title: "Are you sure?",
-      text: `You wont to delete this Player ? `,
+      text: `Are you sure you want to remove this team ?`,
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -40,15 +41,22 @@ function CardPlayed({
     }).then((result) => {
       if (result.isConfirmed) {
         Dispatch(
-          DeleteLeadBoardUser({ GroupId: PlayerGroupNumber, Index: index })
+          DeleteKnockoutDoubleWatingUser({
+            GroupId: PlayerGroupNumber,
+            Index: index,
+          })
         );
-        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+        Swal.fire(
+          "Removed!",
+          "Players has been re-added to waiting list",
+          "success"
+        );
       }
     });
   };
 
   return (
-    <div className="CardPlayed">
+    <div className="DoubleCardPlayed">
       <div className={Isplayed ? "left Isplayed" : "left"}>
         <Image
           src="/Draw/location.svg"
@@ -81,40 +89,12 @@ function CardPlayed({
           <div className={WhoWinner != 1 ? "user-box loser" : "user-box"}>
             <div className="info">
               <span>T4</span>
-              <Image
-                src={
+              <UsersDoubleBox
+                user={
                   DataBase[Player1GroupNumber - 1].Players[Player1Index - 1]
-                    .UserImage
                 }
-                width={30}
-                height={30}
-                alt="User"
+                UserDetailsModelPopuphandelarr={UserDetailsModelPopuphandelarr}
               />
-              <h4>
-                {Winner ? (
-                  <Link href="/Winner">
-                    {
-                      DataBase[Player1GroupNumber - 1].Players[Player1Index - 1]
-                        .FullName
-                    }
-                  </Link>
-                ) : (
-                  <span
-                    onClick={() =>
-                      UserDetailsModelPopuphandelarr(
-                        DataBase[Player1GroupNumber - 1].Players[
-                          Player1Index - 1
-                        ]
-                      )
-                    }
-                  >
-                    {
-                      DataBase[Player1GroupNumber - 1].Players[Player1Index - 1]
-                        .FullName
-                    }
-                  </span>
-                )}
-              </h4>
             </div>
             {!KnockoutStatus && (
               <div
@@ -143,40 +123,13 @@ function CardPlayed({
           <div className={WhoWinner != 2 ? "user-box loser" : "user-box"}>
             <div className="info">
               <span>T4</span>
-              <Image
-                src={
-                  DataBase[Player2GroupNumber - 1]?.Players[Player2Index - 1]
-                    .UserImage
+
+              <UsersDoubleBox
+                user={
+                  DataBase[Player2GroupNumber - 1].Players[Player2Index - 1]
                 }
-                width={20}
-                height={20}
-                alt="User"
+                UserDetailsModelPopuphandelarr={UserDetailsModelPopuphandelarr}
               />
-              <h4>
-                {Winner ? (
-                  <Link href="/Winner">
-                    {
-                      DataBase[Player2GroupNumber - 1].Players[Player2Index - 1]
-                        .FullName
-                    }
-                  </Link>
-                ) : (
-                  <span
-                    onClick={() =>
-                      UserDetailsModelPopuphandelarr(
-                        DataBase[Player2GroupNumber - 1].Players[
-                          Player2Index - 1
-                        ]
-                      )
-                    }
-                  >
-                    {
-                      DataBase[Player2GroupNumber - 1].Players[Player2Index - 1]
-                        .FullName
-                    }
-                  </span>
-                )}
-              </h4>
             </div>
             {!KnockoutStatus && (
               <div

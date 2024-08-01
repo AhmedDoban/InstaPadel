@@ -1,7 +1,7 @@
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-  # waiting-list
+  # PlayersList
   ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.waiting-list {
+.PlayersList {
   position: relative;
   background-color: #f7f9fb;
   border-radius: 10px;
@@ -10,16 +10,17 @@
   gap: 10px;
 }
 @media (max-width: 1200px) {
-  .waiting-list {
+  .PlayersList {
     min-height: 570px;
     justify-content: flex-end;
     align-items: flex-end;
+    flex-direction: column-reverse;
   }
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-# waiting-list left
+# PlayersList left
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.waiting-list .right {
+.PlayersList .right {
   position: absolute;
   width: 50%;
   height: 100%;
@@ -27,7 +28,8 @@
   bottom: 0;
 }
 @media (max-width: 1200px) {
-  .waiting-list .right {
+  .PlayersList .right {
+    position: relative;
     height: 300px;
     width: 100%;
     right: 0;
@@ -35,12 +37,12 @@
     bottom: auto;
   }
 }
-.waiting-list .right::before {
+.PlayersList .right::before {
   position: absolute;
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url("../../../../../../../../public/MyTournaments/waiting-list.png");
+  background-image: url("../../../../../../../../../public/MyTournaments/waiting-list.png");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,7 +52,7 @@
   left: 0;
 }
 
-.waiting-list .right::after {
+.PlayersList .right::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -66,20 +68,20 @@
 }
 
 @media (max-width: 1200px) {
-  .waiting-list .right::before {
+  .PlayersList .right::before {
     transform-origin: bottom right;
     transform: rotate(5deg) scale(1.5);
   }
-  .waiting-list .right::after {
+  .PlayersList .right::after {
     transform-origin: bottom right;
     transform: rotate(5deg) scale(1.6) translateY(0px) translateX(15px);
     border-bottom: 5px solid #cbf396;
   }
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-# waiting-list right
+# PlayersList right
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.waiting-list .left {
+.PlayersList .left {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -89,14 +91,14 @@
   transition: var(--main-transition);
 }
 @media (max-width: 1200px) {
-  .waiting-list .left {
+  .PlayersList .left {
     width: 100%;
   }
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-# waiting-list right head
+# PlayersList right head
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.waiting-list .left .head-waiting {
+.PlayersList .left .head-waiting {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -104,22 +106,22 @@
   flex-wrap: wrap;
   width: 100%;
 }
-.waiting-list .left .head-waiting h1 {
+.PlayersList .left .head-waiting h1 {
   position: relative;
   font-size: 30px;
   font-weight: 600;
   color: #004077;
 }
 @media (max-width: 1200px) {
-  .waiting-list .left .head-waiting h1 {
+  .PlayersList .left .head-waiting h1 {
     font-size: 24px;
   }
 }
 
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-# waiting-list right body
+# PlayersList right body
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.waiting-list .left .waiting-body {
+.PlayersList .left .waiting-body {
   position: relative;
   padding: 15px;
   background-color: #ffffff;
@@ -129,37 +131,22 @@
   border-radius: 8px;
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-# waiting-list right body moreAction 
+# PlayersList right body moreAction 
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.waiting-list .left .waiting-body .more-actions {
+.PlayersList .left .waiting-body .more-actions {
   position: relative;
   display: flex;
   align-items: center;
   gap: 5px;
   justify-content: flex-end;
 }
-.waiting-list .left .waiting-body .more-actions button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  justify-content: flex-end;
-  background-color: transparent;
-  border: 0;
-}
-.waiting-list .left .waiting-body .more-actions button.Prev {
-  flex-direction: row-reverse;
-}
-.waiting-list .left .waiting-body .more-actions button.Prev img {
-  transform: rotate(180deg);
-}
-.waiting-list .left .waiting-body .more-actions img {
+.PlayersList .left .waiting-body .more-actions img {
   position: relative;
   width: 15px;
   height: 15px;
   cursor: pointer;
 }
-.waiting-list .left .waiting-body .more-actions span {
+.PlayersList .left .waiting-body .more-actions span {
   position: relative;
   font-size: 14px;
   font-weight: 300;
@@ -167,9 +154,9 @@
   cursor: pointer;
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-# waiting-list right body userbody 
+# PlayersList right body userbody 
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.waiting-list .left .waiting-body .user-box {
+.PlayersList .left .waiting-body .user-box {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -177,46 +164,46 @@
   gap: 10px;
 }
 @media (max-width: 992px) {
-  .waiting-list .left .waiting-body .user-box {
+  .PlayersList .left .waiting-body .user-box {
     flex-direction: column;
     align-items: flex-start;
   }
 }
 
-.waiting-list .left .waiting-body .user-box .info {
+.PlayersList .left .waiting-body .user-box .info {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-.waiting-list .left .waiting-body .user-box .info .Circle {
+.PlayersList .left .waiting-body .user-box .info .Circle {
   position: relative;
   min-width: 7px;
   height: 7px;
   background-color: #d10000;
   border-radius: 50%;
 }
-.waiting-list .left .waiting-body .user-box .info img {
+.PlayersList .left .waiting-body .user-box .info img {
   position: relative;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   object-fit: cover;
 }
-.waiting-list .left .waiting-body .user-box .info h3 {
+.PlayersList .left .waiting-body .user-box .info h3 {
   position: relative;
   font-size: 16px;
   font-weight: 400;
   color: #004077;
 }
-.waiting-list .left .waiting-body .user-box .actions {
+.PlayersList .left .waiting-body .user-box .actions {
   position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.waiting-list .left .waiting-body .user-box .actions button {
+.PlayersList .left .waiting-body .user-box .actions button {
   position: relative;
   text-decoration: underline;
   font-size: 14px;
@@ -225,15 +212,15 @@
   background-color: transparent;
   cursor: pointer;
 }
-.waiting-list .user-box .actions button.Accept {
+.PlayersList .user-box .actions button.Accept {
   color: #81e200;
 }
-.waiting-list .user-box .actions button.Reject {
+.PlayersList .user-box .actions button.Reject {
   color: #e46b6b;
 }
 
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-# waiting-list SelectGroupPopup
+# PlayersList SelectGroupPopup
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
 .SelectGroupPopup {
   position: fixed;

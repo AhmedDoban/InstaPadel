@@ -8,7 +8,7 @@ import SummaryModel from "../CardsModel/SummaryModel/SummaryModel";
 import ResultSummary from "../CardsModel/ResultSummary/ResultSummary";
 import TimeModel from "../CardsModel/TimeModel/TimeModel";
 import LocationPopModel from "../CardsModel/LocationModel/LocationPopModel";
-import WaitingList from "../WaitingList/WaitingList";
+import PlayersList from "./PlayersList/PlayersList";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 
@@ -28,8 +28,8 @@ function DrawSystem({
   LocationModel,
   SetLocationModel,
 }) {
-  const TournamentsLeadBoard = useSelector(
-    (State) => State.Tournaments.leaderboardSingle
+  const KnockoutDrawDoubleSystem = useSelector(
+    (State) => State.Tournaments.KnockoutDrawDoubleSystem
   );
   const [KnockoutStatus, SetKnockoutStatus] = useState(false);
 
@@ -41,7 +41,7 @@ function DrawSystem({
             className={KnockoutStatus ? "active" : ""}
             onClick={() => SetKnockoutStatus(true)}
           >
-            Start Knockout stage
+            Start knockout stage
           </button>
           <button>
             <Image
@@ -69,49 +69,9 @@ function DrawSystem({
                 Player2GroupNumber="1"
                 Player1Index="1"
                 Player2Index="2"
-                WhoWinner="2"
-                DataBase={TournamentsLeadBoard}
+                WhoWinner="1"
+                DataBase={KnockoutDrawDoubleSystem}
               />
-              <CardPlayed
-                KnockoutStatus={KnockoutStatus}
-                SetUserDetails={SetUserDetails}
-                SetLocationModel={SetLocationModel}
-                SetUserDetailsModel={SetUserDetailsModel}
-                SetSummaryResultModel={SetSummaryResultModel}
-                SetSummaryDetailsModel={SetSummaryDetailsModel}
-                SetTimerModel={SetTimerModel}
-                Player1GroupNumber="1"
-                Player2GroupNumber="1"
-                Player1Index="3"
-                Player2Index="4"
-                WhoWinner="2"
-                DataBase={TournamentsLeadBoard}
-              />
-            </div>
-            <Image
-              src="/Draw/LeftArrowSmall.svg"
-              width={80}
-              height={230}
-              alt="LeftArrowSmall"
-            />
-            <CardPlayed
-              KnockoutStatus={KnockoutStatus}
-              SetUserDetails={SetUserDetails}
-              SetLocationModel={SetLocationModel}
-              SetUserDetailsModel={SetUserDetailsModel}
-              SetSummaryResultModel={SetSummaryResultModel}
-              SetSummaryDetailsModel={SetSummaryDetailsModel}
-              SetTimerModel={SetTimerModel}
-              Player1GroupNumber="1"
-              Player2GroupNumber="1"
-              Player1Index="2"
-              Player2Index="4"
-              WhoWinner="2"
-              DataBase={TournamentsLeadBoard}
-            />
-          </div>
-          <div className="card-played-box">
-            <div className="left-played">
               <CardPlayed
                 KnockoutStatus={KnockoutStatus}
                 SetUserDetails={SetUserDetails}
@@ -125,22 +85,7 @@ function DrawSystem({
                 Player1Index="1"
                 Player2Index="2"
                 WhoWinner="1"
-                DataBase={TournamentsLeadBoard}
-              />
-              <CardPlayed
-                KnockoutStatus={KnockoutStatus}
-                SetUserDetails={SetUserDetails}
-                SetLocationModel={SetLocationModel}
-                SetUserDetailsModel={SetUserDetailsModel}
-                SetSummaryResultModel={SetSummaryResultModel}
-                SetSummaryDetailsModel={SetSummaryDetailsModel}
-                SetTimerModel={SetTimerModel}
-                Player1GroupNumber="2"
-                Player2GroupNumber="2"
-                Player1Index="3"
-                Player2Index="4"
-                WhoWinner="1"
-                DataBase={TournamentsLeadBoard}
+                DataBase={KnockoutDrawDoubleSystem}
               />
             </div>
             <Image
@@ -149,6 +94,7 @@ function DrawSystem({
               height={230}
               alt="LeftArrowSmall"
             />
+
             <CardPlayed
               KnockoutStatus={KnockoutStatus}
               SetUserDetails={SetUserDetails}
@@ -157,38 +103,22 @@ function DrawSystem({
               SetSummaryResultModel={SetSummaryResultModel}
               SetSummaryDetailsModel={SetSummaryDetailsModel}
               SetTimerModel={SetTimerModel}
-              Player1GroupNumber="2"
+              Player1GroupNumber="1"
               Player2GroupNumber="2"
               Player1Index="1"
-              Player2Index="3"
+              Player2Index="1"
               WhoWinner="1"
-              DataBase={TournamentsLeadBoard}
+              DataBase={KnockoutDrawDoubleSystem}
             />
           </div>
         </div>
         <Image
           src="/Draw/LeftArrowLarg.svg"
           width={200}
-          height={400}
+          height={100}
           alt="LeftArrowSmall"
         />
         <div className="winner">
-          <CardPlayed
-            KnockoutStatus={KnockoutStatus}
-            SetUserDetails={SetUserDetails}
-            SetLocationModel={SetLocationModel}
-            Winner={true}
-            SetUserDetailsModel={SetUserDetailsModel}
-            SetSummaryResultModel={SetSummaryResultModel}
-            SetSummaryDetailsModel={SetSummaryDetailsModel}
-            SetTimerModel={SetTimerModel}
-            Player1GroupNumber="3"
-            Player2GroupNumber="4"
-            Player1Index="1"
-            Player2Index="2"
-            WhoWinner="1"
-            DataBase={TournamentsLeadBoard}
-          />
           <div className="center-Winner">
             <CardPlayed
               KnockoutStatus={KnockoutStatus}
@@ -200,35 +130,18 @@ function DrawSystem({
               SetSummaryDetailsModel={SetSummaryDetailsModel}
               SetTimerModel={SetTimerModel}
               Player1GroupNumber="1"
-              Player2GroupNumber="4"
-              Player1Index="4"
+              Player2GroupNumber="3"
+              Player1Index="1"
               Player2Index="1"
-              WhoWinner="1"
-              DataBase={TournamentsLeadBoard}
+              WhoWinner="2"
+              DataBase={KnockoutDrawDoubleSystem}
             />
           </div>
-
-          <CardPlayed
-            KnockoutStatus={KnockoutStatus}
-            SetUserDetails={SetUserDetails}
-            SetLocationModel={SetLocationModel}
-            Winner={true}
-            SetUserDetailsModel={SetUserDetailsModel}
-            SetSummaryResultModel={SetSummaryResultModel}
-            SetSummaryDetailsModel={SetSummaryDetailsModel}
-            SetTimerModel={SetTimerModel}
-            Player1GroupNumber="1"
-            Player2GroupNumber="2"
-            Player1Index="4"
-            Player2Index="1"
-            WhoWinner="1"
-            DataBase={TournamentsLeadBoard}
-          />
         </div>
         <Image
           src="/Draw/RightArrowLarg.svg"
           width={200}
-          height={400}
+          height={100}
           alt="RightArrowLarg"
         />
         <div className="right">
@@ -247,7 +160,7 @@ function DrawSystem({
                 Player1Index="1"
                 Player2Index="2"
                 WhoWinner="1"
-                DataBase={TournamentsLeadBoard}
+                DataBase={KnockoutDrawDoubleSystem}
               />
               <CardPlayed
                 KnockoutStatus={KnockoutStatus}
@@ -257,12 +170,12 @@ function DrawSystem({
                 SetSummaryResultModel={SetSummaryResultModel}
                 SetSummaryDetailsModel={SetSummaryDetailsModel}
                 SetTimerModel={SetTimerModel}
-                Player1GroupNumber="3"
-                Player2GroupNumber="3"
-                Player1Index="3"
-                Player2Index="4"
+                Player1GroupNumber="4"
+                Player2GroupNumber="4"
+                Player1Index="1"
+                Player2Index="2"
                 WhoWinner="2"
-                DataBase={TournamentsLeadBoard}
+                DataBase={KnockoutDrawDoubleSystem}
               />
             </div>
             <Image
@@ -280,71 +193,21 @@ function DrawSystem({
               SetSummaryDetailsModel={SetSummaryDetailsModel}
               SetTimerModel={SetTimerModel}
               Player1GroupNumber="3"
-              Player2GroupNumber="3"
-              Player1Index="1"
-              Player2Index="4"
-              WhoWinner="1"
-              DataBase={TournamentsLeadBoard}
-            />
-          </div>
-          <div className="card-played-box">
-            <div className="right-played">
-              <CardPlayed
-                KnockoutStatus={KnockoutStatus}
-                SetUserDetails={SetUserDetails}
-                SetLocationModel={SetLocationModel}
-                SetUserDetailsModel={SetUserDetailsModel}
-                SetSummaryResultModel={SetSummaryResultModel}
-                SetSummaryDetailsModel={SetSummaryDetailsModel}
-                SetTimerModel={SetTimerModel}
-                Player1GroupNumber="4"
-                Player2GroupNumber="4"
-                Player1Index="1"
-                Player2Index="2"
-                WhoWinner="2"
-                DataBase={TournamentsLeadBoard}
-              />
-              <CardPlayed
-                KnockoutStatus={KnockoutStatus}
-                SetUserDetails={SetUserDetails}
-                SetLocationModel={SetLocationModel}
-                SetUserDetailsModel={SetUserDetailsModel}
-                SetSummaryResultModel={SetSummaryResultModel}
-                SetSummaryDetailsModel={SetSummaryDetailsModel}
-                SetTimerModel={SetTimerModel}
-                Player1GroupNumber="4"
-                Player2GroupNumber="4"
-                Player1Index="3"
-                Player2Index="4"
-                WhoWinner="1"
-                DataBase={TournamentsLeadBoard}
-              />
-            </div>
-            <Image
-              src="/Draw/RightArrowSmall.svg"
-              width={80}
-              height={230}
-              alt="LeftArrowSmall"
-            />
-            <CardPlayed
-              KnockoutStatus={KnockoutStatus}
-              SetUserDetails={SetUserDetails}
-              SetLocationModel={SetLocationModel}
-              SetUserDetailsModel={SetUserDetailsModel}
-              SetSummaryResultModel={SetSummaryResultModel}
-              SetSummaryDetailsModel={SetSummaryDetailsModel}
-              SetTimerModel={SetTimerModel}
-              Player1GroupNumber="4"
               Player2GroupNumber="4"
-              Player1Index="2"
-              Player2Index="3"
+              Player1Index="1"
+              Player2Index="2"
               WhoWinner="1"
-              DataBase={TournamentsLeadBoard}
+              DataBase={KnockoutDrawDoubleSystem}
             />
           </div>
         </div>
       </div>
-      {!KnockoutStatus && <WaitingList />}
+      {!KnockoutStatus && (
+        <PlayersList
+          SetUserDetails={SetUserDetails}
+          SetUserDetailsModel={SetUserDetailsModel}
+        />
+      )}
       {UserDetailsModel && (
         <UserModel
           UserDetails={UserDetails}

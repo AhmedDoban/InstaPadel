@@ -109,17 +109,6 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="/FAQ">
-                  <Image
-                    src="/Icon/FAQ.svg"
-                    alt="look"
-                    width={20}
-                    height={20}
-                  />
-                  <span>FAQ</span>
-                </Link>
-              </li>
-              <li>
                 <Link href="/" onClick={() => logOut()}>
                   <Image
                     src="/Icon/LogOut.svg"

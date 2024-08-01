@@ -1,0 +1,35 @@
+.UsersDoubleBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #004077;
+}
+.UsersDoubleBox .ImageGroub {
+  position: relative;
+  display: flex;
+}
+.UsersDoubleBox img {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.UsersDoubleBox img:nth-child(2) {
+  margin-left: -10px;
+  border: 1px solid #eee;
+}
+
+.UsersDoubleBox .users_Names {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+@media (max-width: 992px) {
+  .UsersDoubleBox {
+    flex-direction: row-reverse;
+  }
+}

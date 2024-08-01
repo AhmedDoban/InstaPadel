@@ -30,7 +30,7 @@ function CardPlayed({
   const DeleteUser = (PlayerGroupNumber, index) => {
     Swal.fire({
       title: "Are you sure?",
-      text: `You wont to delete this Player ? `,
+      text: `Are you sure you want to remove this player?`,
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -42,7 +42,11 @@ function CardPlayed({
         Dispatch(
           DeleteKnockoutWatingUser({ GroupId: PlayerGroupNumber, Index: index })
         );
-        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+        Swal.fire(
+          "Removed!",
+          "Player has been re-added to waiting list.",
+          "success"
+        );
       }
     });
   };

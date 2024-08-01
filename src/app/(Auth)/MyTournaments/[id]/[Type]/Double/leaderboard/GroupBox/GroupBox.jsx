@@ -3,7 +3,8 @@ import "./GroupBox.css";
 import Image from "next/image";
 import Swal from "sweetalert2";
 import { useDispatch } from "react-redux";
-import { DeleteLeadBoardUser } from "@/Toolkit/Slices/TournamentsSlice";
+import { DeleteLeadBoardDoubleUser } from "@/Toolkit/Slices/TournamentsSlice";
+import UsersDoubleBox from "../../UsersDoubleBox/UsersDoubleBox";
 
 function GroupBox({
   group,
@@ -22,7 +23,7 @@ function GroupBox({
   const DeleteUser = (index) => {
     Swal.fire({
       title: "Are you sure?",
-      text: `You wont to delete this Player ? `,
+      text: `Are you sure you want to remove this team ?`,
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -32,9 +33,16 @@ function GroupBox({
     }).then((result) => {
       if (result.isConfirmed) {
         Dispatch(
-          DeleteLeadBoardUser({ GroupId: group.GroupId - 1, Index: index })
+          DeleteLeadBoardDoubleUser({
+            GroupId: group.GroupId - 1,
+            Index: index,
+          })
         );
-        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+        Swal.fire(
+          "Removed!",
+          "Players has been re-added to waiting list.",
+          "success"
+        );
       }
     });
   };
@@ -62,8 +70,8 @@ function GroupBox({
             <th>N</th>
             <th colSpan={5}>Name</th>
             <th>GP</th>
-            <th>w</th>
-            <th>l</th>
+            <th>W</th>
+            <th>L</th>
             <th>S</th>
             <th>+/-</th>
             {TourStaus && <th></th>}
@@ -74,17 +82,12 @@ function GroupBox({
             <tr key={index}>
               <td data-label="N">T{index + 1}</td>
               <td data-label="Name" colSpan={5}>
-                <div className="user_Id_Data">
-                  <Image
-                    src={user.UserImage}
-                    width={35}
-                    height={35}
-                    alt={user.FullName}
-                  />
-                  <span onClick={() => UserDetailsModelPopuphandelarr(user)}>
-                    {user.FullName}
-                  </span>
-                </div>
+                <UsersDoubleBox
+                  user={user}
+                  UserDetailsModelPopuphandelarr={
+                    UserDetailsModelPopuphandelarr
+                  }
+                />
               </td>
               <td data-label="GP">
                 <span>0</span>

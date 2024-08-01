@@ -138,6 +138,21 @@
   gap: 5px;
   justify-content: flex-end;
 }
+.waiting-list .left .waiting-body .more-actions button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: flex-end;
+  background-color: transparent;
+  border: 0;
+}
+.waiting-list .left .waiting-body .more-actions button.Prev {
+  flex-direction: row-reverse;
+}
+.waiting-list .left .waiting-body .more-actions button.Prev img {
+  transform: rotate(180deg);
+}
 .waiting-list .left .waiting-body .more-actions img {
   position: relative;
   width: 15px;
