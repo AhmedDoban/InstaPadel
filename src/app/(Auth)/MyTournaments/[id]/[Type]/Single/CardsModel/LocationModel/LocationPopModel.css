@@ -1,0 +1,144 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# LocationPopModel
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.LocationPopModel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  background: #00000033;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+ # LocationPopModel LocationPopModel-details-box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.LocationPopModel .LocationPopModel-details-box {
+  position: relative;
+  background: #ffffff;
+  border-radius: 10px;
+  min-width: 350px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: fading 0.5s ease-in-out;
+}
+@keyframes fading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+ # LocationPopModel LocationPopModel-details-box  TimeHead
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.LocationPopModel .LocationPopModel-details-box .TimeHead {
+  position: relative;
+  padding: 25px 20px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+ # LocationPopModel LocationPopModel-details-box  TimeBody
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.LocationPopModel .LocationPopModel-details-box .TimeBody {
+  position: relative;
+  padding: 15px 10px 5px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+    # LocationPopModel LocationPopModel-details-box Sets
+    ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.LocationPopModel .LocationPopModel-details-box .sets-box {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.LocationPopModel .LocationPopModel-details-box .sets-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+.LocationPopModel .LocationPopModel-details-box .sets-input .input-box,
+.LocationPopModel .sets-input .DropdownSelect-box {
+  position: relative;
+  border: 1px solid #e7e8e9;
+  outline: 0;
+  color: #545f71;
+  height: 50px;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.LocationPopModel .sets-input .DropdownSelect-box .DropdownSelect {
+  width: 100%;
+}
+.ReactDropdownSelect:focus,
+.css-wmy1p7-ReactDropdownSelect:focus-within {
+  outline: 0;
+  box-shadow: none !important;
+}
+.LocationPopModel .LocationPopModel-details-box .sets-input .input-box input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  color: #6d747b;
+  font-weight: 300;
+  font-size: 14px;
+}
+.LocationPopModel .LocationPopModel-details-box .sets-input label {
+  position: relative;
+  font-size: 16px;
+  font-weight: 300;
+  color: #545f71;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+ # LocationPopModel LocationPopModel-details-box Sets
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.LocationPopModel .LocationPopModel-details-box .sets-action-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px;
+}
+.LocationPopModel .LocationPopModel-details-box .sets-action-box button {
+  position: relative;
+  width: 100%;
+  padding: 13px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  transition: var(--main-transition);
+}
+.LocationPopModel .LocationPopModel-details-box .sets-action-box button.Clear {
+  background-color: #f2fce6;
+  color: #2f3942;
+}
+.LocationPopModel .LocationPopModel-details-box .sets-action-box button.Apply {
+  background-color: #81e200;
+  color: #ffffff;
+}

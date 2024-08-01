@@ -6,14 +6,10 @@ import UserTournaments from "./UserTournaments/UserTournaments";
 
 function Page() {
   const [Tournaments, SetTournaments] = useState([
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
+    {
+      Type: "single",
+    },
+    { Type: "double" },
   ]);
 
   return (

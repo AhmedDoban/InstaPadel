@@ -1,0 +1,21 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# .Leaderboard 
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Leaderboard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Leaderboard .Groups-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+}
+@media (max-width: 772px) {
+  .Leaderboard .Groups-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+

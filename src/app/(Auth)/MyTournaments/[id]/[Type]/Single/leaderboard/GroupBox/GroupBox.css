@@ -1,0 +1,156 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# .Leaderboard .Groups-container group box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Leaderboard .Groups-container .group-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f7f9fb;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# .Leaderboard .Groups-container group box Head
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Leaderboard .Groups-container .group-box .group-title {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #e6ecf1;
+}
+.Leaderboard .Groups-container .group-box .group-title h1 {
+  position: relative;
+  font-size: 25px;
+  font-weight: 600;
+  color: #004077;
+}
+.Leaderboard .Groups-container .group-box .group-title .actions {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.Leaderboard .Groups-container .group-box .group-title button {
+  position: relative;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Leaderboard .Groups-container .group-box .group-title .actions img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+ # .Leaderboard .Groups-container PlayersTable
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Leaderboard .Groups-container .group-box .PlayersTable {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  border-spacing: 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  table-layout: fixed;
+}
+@media (max-width: 992px) {
+  .Leaderboard .Groups-container .group-box .PlayersTable .TableBody {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+.Leaderboard .Groups-container .group-box .PlayersTable .TableHead th {
+  position: relative;
+  padding: 10px 0;
+  border-bottom: 1px solid #e7e8e9;
+  color: #2f3942;
+  font-size: 14px;
+  font-weight: 400;
+}
+.Dashboards
+  .Dashboardsleft
+  .box-users
+  .PlayersTable
+  .TableHead
+  th:nth-child(4) {
+  position: relative;
+  width: fit-content;
+  width: 50px;
+}
+@media (max-width: 992px) {
+  .Leaderboard .Groups-container .group-box .PlayersTable .TableHead {
+    display: none;
+  }
+}
+
+.Leaderboard .Groups-container .group-box .PlayersTable tr td {
+  position: relative;
+  padding: 5px 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: #737c81;
+}
+.Leaderboard .Groups-container .group-box .PlayersTable .user_Id_Data {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #004077;
+}
+.Leaderboard .Groups-container .group-box .PlayersTable .user_Id_Data img {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.Leaderboard .Groups-container .group-box .PlayersTable tr td .actions {
+  position: relative;
+  display: flex;
+  gap: 5px;
+}
+.Leaderboard .Groups-container .group-box .PlayersTable tr td .actions button {
+  position: relative;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .Leaderboard .Groups-container .group-box .PlayersTable tr:not(:last-child) {
+    position: relative;
+    border-bottom: 1px solid #004077;
+  }
+  .Leaderboard .Groups-container .group-box .PlayersTable tr td {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+  }
+  .Leaderboard .Groups-container .group-box .PlayersTable tr td::before {
+    position: absolute;
+    content: attr(data-label);
+    left: 0;
+  }
+  .Leaderboard .Groups-container .group-box .PlayersTable .user_Id_Data {
+    flex-direction: row-reverse;
+  }
+}

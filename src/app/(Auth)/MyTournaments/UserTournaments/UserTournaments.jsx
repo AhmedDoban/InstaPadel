@@ -14,7 +14,7 @@ function UserTournaments({ Tournaments }) {
           <Link
             className="Tournament-Card"
             key={index}
-            href={`/MyTournaments/${index}`}
+            href={`/MyTournaments/${index}/${tour.Type}`}
           >
             <div className="Head">
               <h1>Tournament {index + 1}</h1>

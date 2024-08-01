@@ -1,0 +1,122 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# My-Tournaments-Head-action 
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.My-Tournaments-Head-action {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.My-Tournaments-Head-action .Tournaments-nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+@media (max-width: 992px) {
+  .My-Tournaments-Head-action {
+    gap: 20px;
+  }
+}
+.My-Tournaments-Head-action .Tournaments-nav-link li {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  color: #6d747b;
+  cursor: pointer;
+  transition: var(--main-transition);
+  padding-bottom: 7px;
+}
+.My-Tournaments-Head-action .Tournaments-nav-link li.active {
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  color: #81e200;
+}
+.My-Tournaments-Head-action .Tournaments-nav-link li.active::before {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 3px;
+  background-color: #81e200;
+  border-radius: 23px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: var(--main-transition);
+  animation: Fulling 0.5s ease-in-out;
+}
+@keyframes Fulling {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30%;
+  }
+}
+.My-Tournaments-Head-action .box > button {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 13px 0;
+  background-color: #81e200;
+  border-radius: 8px;
+  width: 200px;
+  max-width: 100%;
+  border: 0;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.My-Tournaments-Head-action .box button.active {
+  position: relative;
+  background-color: #6d747b;
+}
+@media (max-width: 992px) {
+  .My-Tournaments-Head-action .boxTitle {
+    width: 100%;
+  }
+  .My-Tournaments-Head-action .box button {
+    width: fit-content;
+    padding: 8px;
+  }
+}
+.My-Tournaments-Head-action .box .Actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.My-Tournaments-Head-action .box .Actions > button {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 13px;
+  background-color: #81e200;
+  border-radius: 8px;
+  min-width: fit-content;
+  max-width: 100%;
+  border: 0;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.My-Tournaments-Head-action .box .Actions button.active {
+  position: relative;
+  background-color: #6d747b;
+}
